@@ -1,7 +1,8 @@
 import React from "react";
-import { Button, Container, Row, Image } from "react-bootstrap";
+// import { BrowserRouter as Routes, Route, Link } from "react-router-dom";
+import { Button, Container, Row, Image, Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Form from "react-bootstrap/Form";
+import "./App.css";
 
 function Fpage() {
   return (
@@ -48,12 +49,9 @@ function Fpage() {
             Pidgin
             <input type="radio" value={"english"} />
           </label>
-
-          <div className="d-grid mt-5">
-            <Button type="btn" className="text-center btn-lg">
-              Next
-            </Button>
-          </div>
+          <Button type="btn" className="text-center btn-lg">
+            Next
+          </Button>
         </Form>
       </Row>
     </Container>
