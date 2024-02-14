@@ -20,7 +20,7 @@ function Signup() {
         alt="logo"
         className="mx-auto d-block img"
       />
-      <Row className="row  mx-auto  mt-4">
+      <Row className="row  mx-auto d-block mt-4">
         <h5 className="text-center f-heading">Create Account</h5>
         <p className="f-p2">Get started by entering your mobile phone number</p>
         <div>
