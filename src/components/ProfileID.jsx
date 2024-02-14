@@ -31,10 +31,10 @@ function ProfileID() {
         <h5 className="text-center f-heading">Create Your Profile</h5>
         <p className="text-center">Help us get to know you better. </p>
         <div>
-          <Form.Group className="mb-3 text-center">
+          <Form.Group className="mb-3 d-flex justify-content-center">
             {image ? (
               <Image
-                src="../images/"
+                src="../images/tape.jpg"
                 roundedCircle
                 style={{ width: "150px", height: "150px" }}
               />
@@ -42,18 +42,22 @@ function ProfileID() {
               <div
                 className="d-flex align-items-center justify-content-center rounded-circle"
                 style={{
-                  width: "150px",
-                  height: "150px",
+                  width: "100px",
+                  height: "100px",
                   border: "1px solid #ced4da",
                 }}
               >
-                <BsUpload size={20} color="#495057" />
+                <BsUpload
+                  size={50}
+                  color="#495057"
+                  class="position-absolute bottom-10 end-10"
+                />
               </div>
             )}
             <Form.Control
               type="file"
               onChange={handleImageChange}
-              style={{ display: "none" }}
+              className="d-none"
             />
           </Form.Group>
         </div>
