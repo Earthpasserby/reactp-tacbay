@@ -11,6 +11,8 @@ import {
 import Fpage from "./components/Fpage";
 import Signup from "./components/Signup";
 import Pagev from "./components/Pagev";
+import ProfileID from "./components/ProfileID";
+
 export default function App() {
   return (
     <BrowserRouter>
@@ -19,6 +21,7 @@ export default function App() {
         <Route path="/Fpage" element={<Fpage />} />
         <Route path="/Signup" element={<Signup />} />
         <Route path="/Pagev" element={<Pagev />} />
+        <Route path="/ProfileID" element={<ProfileID />} />
       </Routes>
     </BrowserRouter>
   );
