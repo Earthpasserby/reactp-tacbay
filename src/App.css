@@ -135,6 +135,46 @@ label {
     border: 2px solid black;
   }
 }
+/* ProfileID page/*/
+
+.Profile-input {
+  width: 384px;
+  height: 44px;
+  border-radius: 8px;
+}
+.Profile-label {
+  width: 64px;
+  height: 20px;
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #344051;
+}
+.Profile-label3 {
+  width: 91px;
+  height: 20px;
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #344051;
+}
+.Profile-label4 {
+  width: 46px;
+  height: 20px;
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #344051;
+}
 @media (max-width: 767.98px) {
   .row {
     width: 105%;

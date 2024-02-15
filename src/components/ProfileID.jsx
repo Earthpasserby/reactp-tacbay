@@ -1,5 +1,12 @@
 import React from "react";
-import { Container, Image, Row, Button, Form } from "react-bootstrap";
+import {
+  Container,
+  Image,
+  Row,
+  Button,
+  Form,
+  InputGroup,
+} from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BsUpload } from "react-icons/bs"; // Assuming you're using react-icons for the upload icon
 import { useState } from "react";
@@ -60,6 +67,58 @@ function ProfileID() {
               className="d-none"
             />
           </Form.Group>
+        </div>
+        <div>
+          <label htmlFor="text" className="Profile-label3">
+            Firstname
+          </label>
+          <InputGroup size="lg">
+            <Form.Control
+              aria-label="Large"
+              aria-describedby="inputGroup-sizing-sm"
+              className="Profile-input mb-2"
+            />
+          </InputGroup>
+        </div>
+        <div>
+          <label htmlFor="text" className="Profile-label3">
+            Lastname
+          </label>
+          <InputGroup size="lg">
+            <Form.Control
+              aria-label="Large"
+              aria-describedby="inputGroup-sizing-sm"
+              className="Profile-input mb-2"
+            />
+          </InputGroup>
+        </div>
+        <div>
+          <label htmlFor="text" className="Profile-label3">
+            Email Address
+          </label>
+          <InputGroup size="lg" className="Profile-input">
+            <Form.Control
+              aria-label="Large"
+              aria-describedby="inputGroup-sizing-sm"
+              className="Profile-input mb-2n"
+            />
+          </InputGroup>
+        </div>
+        <div>
+          <label htmlFor="text" className="Profile-label4">
+            Gender
+          </label>
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Specify gender</option>
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+            <option value="3">Homosapien</option>
+          </select>
+        </div>
+        <div className="d-grid mt-4">
+          <Button type="btn" className="text-center  btn-lg  border rounded-4 ">
+            Continue
+          </Button>
         </div>
       </Row>
     </Container>
