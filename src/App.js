@@ -12,6 +12,7 @@ import Fpage from "./components/Fpage";
 import Signup from "./components/Signup";
 import Pagev from "./components/Pagev";
 import ProfileID from "./components/ProfileID";
+import Passwordpage from "./components/Passwordpage";
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
         <Route path="/Signup" element={<Signup />} />
         <Route path="/Pagev" element={<Pagev />} />
         <Route path="/ProfileID" element={<ProfileID />} />
+        <Route path="/Passwordpage" element={<Passwordpage />} />
       </Routes>
     </BrowserRouter>
   );

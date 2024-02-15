@@ -175,6 +175,23 @@ label {
   text-align: left;
   color: #344051;
 }
+/* Password page/*/
+.Pass-btn {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  aspect-ratio: 1;
+  height: 80%;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 8px;
+}
+
 @media (max-width: 767.98px) {
   .row {
     width: 105%;
