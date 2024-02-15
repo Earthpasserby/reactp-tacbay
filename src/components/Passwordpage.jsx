@@ -34,7 +34,26 @@ const Passwordpage = () => {
                 aria-describedby="inputGroup-sizing-sm"
                 placeholder="********"
                 type="password"
-                className=" mb-2"
+                className="Passw-input mb-2"
+              />
+              <span className="Pass-btn">
+                <FiEye />
+              </span>
+            </InputGroup>
+          </Form>
+        </div>
+        <div>
+          <label htmlFor="text" className="t">
+            Confirm password
+          </label>
+          <Form>
+            <InputGroup>
+              <Form.Control
+                aria-label="Large"
+                aria-describedby="inputGroup-sizing-sm"
+                placeholder="********"
+                type="password"
+                className="Passw-input mb-2"
               />
               <span className="Pass-btn">
                 <FiEye />
