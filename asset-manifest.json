@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Earthpasserby/reactp-tacbay/static/css/main.28f19567.css",
-    "main.js": "/Earthpasserby/reactp-tacbay/static/js/main.44d71348.js",
-    "static/js/592.4c226835.chunk.js": "/Earthpasserby/reactp-tacbay/static/js/592.4c226835.chunk.js",
-    "index.html": "/Earthpasserby/reactp-tacbay/index.html",
-    "main.28f19567.css.map": "/Earthpasserby/reactp-tacbay/static/css/main.28f19567.css.map",
-    "main.44d71348.js.map": "/Earthpasserby/reactp-tacbay/static/js/main.44d71348.js.map",
-    "592.4c226835.chunk.js.map": "/Earthpasserby/reactp-tacbay/static/js/592.4c226835.chunk.js.map"
+    "main.css": "/reactp-tacbay/static/css/main.28f19567.css",
+    "main.js": "/reactp-tacbay/static/js/main.576980f3.js",
+    "static/js/592.4c226835.chunk.js": "/reactp-tacbay/static/js/592.4c226835.chunk.js",
+    "index.html": "/reactp-tacbay/index.html",
+    "main.28f19567.css.map": "/reactp-tacbay/static/css/main.28f19567.css.map",
+    "main.576980f3.js.map": "/reactp-tacbay/static/js/main.576980f3.js.map",
+    "592.4c226835.chunk.js.map": "/reactp-tacbay/static/js/592.4c226835.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.28f19567.css",
-    "static/js/main.44d71348.js"
+    "static/js/main.576980f3.js"
   ]
 }
