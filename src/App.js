@@ -16,7 +16,7 @@ import Passwordpage from "./components/Passwordpage";
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route index element={<Fpage />} />
         <Route path="/Fpage" element={<Fpage />} />
