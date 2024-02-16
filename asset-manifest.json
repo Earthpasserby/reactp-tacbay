@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/reactp-tacbay/static/css/main.28f19567.css",
-    "main.js": "/reactp-tacbay/static/js/main.576980f3.js",
+    "main.js": "/reactp-tacbay/static/js/main.bb79c643.js",
     "static/js/592.4c226835.chunk.js": "/reactp-tacbay/static/js/592.4c226835.chunk.js",
     "index.html": "/reactp-tacbay/index.html",
     "main.28f19567.css.map": "/reactp-tacbay/static/css/main.28f19567.css.map",
-    "main.576980f3.js.map": "/reactp-tacbay/static/js/main.576980f3.js.map",
+    "main.bb79c643.js.map": "/reactp-tacbay/static/js/main.bb79c643.js.map",
     "592.4c226835.chunk.js.map": "/reactp-tacbay/static/js/592.4c226835.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.28f19567.css",
-    "static/js/main.576980f3.js"
+    "static/js/main.bb79c643.js"
   ]
 }
