@@ -53,6 +53,7 @@ label {
   letter-spacing: 0em;
   text-align: center;
 }
+
 .img {
   width: 200px;
   height: 40px;
@@ -194,7 +195,41 @@ label {
   height: 40px;
   border-radius: 8px;
 }
-
+.p2 {
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  font-size: 20px;
+  border: 1.5px;
+}
+.pas-input {
+  width: 20px;
+  height: 12px;
+}
+.pass-label1 {
+  width: 319px;
+  height: 20px;
+  color: #344051;
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.password {
+  height: 0.4rem;
+  width: 100%;
+  background-color: #f5f5f5;
+  border-radius: 0.4rem;
+}
+#bar {
+  width: 0;
+  height: 100%;
+  background-color: #141;
+  border-radius: inherit;
+  transition: 0.4s ease-in-out;
+}
 @media (max-width: 767.98px) {
   .row {
     width: 105%;
