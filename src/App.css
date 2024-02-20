@@ -263,15 +263,21 @@ label {
   letter-spacing: 0em;
   text-align: center;
 }
-.h-p {
-  color: #344051;
+.p-h {
+  color: #141c24;
   font-family: "Roboto";
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 24px;
-  letter-spacing: 0em;
-  text-align: center;
 }
+.cont {
+  display: flex;
+  align-items: top;
+}
+.fa {
+  margin-right: 5px;
+}
+
 @media (max-width: 767.98px) {
   .row {
     width: 105%;
@@ -340,5 +346,9 @@ label {
   }
   .fw-semibold {
     font-size: 14px;
+  }
+  /* Houserule page/*/
+  .cont {
+    padding-top: 10px;
   }
 }
