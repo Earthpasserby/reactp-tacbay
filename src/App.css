@@ -225,10 +225,72 @@ label {
 }
 #bar {
   width: 0;
-  height: 100%;
-  background-color: #141;
+  background: transparent;
   border-radius: inherit;
-  transition: 0.4s ease-in-out;
+  transition: all 300ms ease-in-out;
+  bottom: -8px;
+  height: 5px;
+  left: 0;
+  position: absolute;
+}
+#bar[data-score="null"] {
+  width: 0;
+  background: red;
+}
+#bar[data-score="0"] {
+  width: 5%;
+  background: green;
+}
+#bar[data-score="1"] {
+  width: 25%;
+  background: blue;
+}
+#bar[data-score="2"] {
+  width: 50%;
+  background: blue;
+}
+#bar[data-score="3"] {
+  width: 75%;
+  background: gold;
+}
+#bar[data-score="4"] {
+  width: 100%;
+  background: darkmagenta;
+}
+.label-password {
+  display: block;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 700;
+  width: 100%;
+  color: #777222;
+}
+.input-password {
+  display: block;
+  text-transform: none;
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
+}
+/* .assword {
+  cursor: pointer;
+  position: absolute;
+  bottom: 11px;
+  right: 0;
+  height: px;
+  padding: 1px 19px;
+  font-size: 0.8rem;
+  font-weight: 700;
+} */
+.show-password {
+  cursor: pointer;
+  position: absolute;
+  top: 30px;
+  height: 16px;
+  right: 0;
+  padding: 1px 19px;
+  font-size: 0.8rem;
+  font-weight: 700;
 }
 @media (max-width: 767.98px) {
   .row {
