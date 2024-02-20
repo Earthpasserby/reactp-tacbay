@@ -1,33 +1,24 @@
 import React, { useState } from "react";
-import {
-  Container,
-  Image,
-  Row,
-  Button,
-  InputGroup,
-  Form,
-} from "react-bootstrap";
+import { Container, Image, Row, Button, Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FiEye } from "react-icons/fi";
 import zxcvbn from "zxcvbn";
 
 function Passwordpage() {
   const [type, setType] = useState("input");
-  const [score, setScore] = useState(null);
+  const hideShow = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    let currentType = type === "input" ? "password" : "input";
+    setType(currentType);
+  };
   const showHide = (e) => {
     e.preventDefault();
     e.stopPropagation();
     let currentType = type === "input" ? "password" : "input";
     setType(currentType);
   };
-  const testStrengthPassword = (e) => {
-    if (e.target.value !== "") {
-      let pass = zxcvbn(e.target.value);
-      setScore(pass.score);
-    } else {
-      setScore(null);
-    }
-  };
+
   /* new color*/
   const funcProgressColor = () => {
     switch (testResult.score) {
@@ -41,6 +32,8 @@ function Passwordpage() {
         return "#9bc158";
       case 4:
         return "#00b500";
+      case 5:
+        return "#00b500";
       default:
         return "none";
     }
@@ -49,7 +42,7 @@ function Passwordpage() {
   const createPassLabel = () => {
     switch (testResult.score) {
       case 0:
-        return "Very Weak";
+        return "";
       case 1:
         return "Weak";
       case 2:
@@ -57,6 +50,8 @@ function Passwordpage() {
       case 3:
         return "Strong";
       case 4:
+        return "Very Strong";
+      case 5:
         return "Very Strong";
       default:
         return "none";
@@ -85,118 +80,44 @@ function Passwordpage() {
           To ensure the security of your account, please create a robust
           password.
         </p>
-        <div className="form-group">
-          <label>New password</label>
-          <input
-            type="password"
-            className="form-control input-password"
-            placeholder="password"
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          {/* <span className="assword" onClick={showHide}>
-            {type === "input" ? <FiEye /> : <FiEye />}
-          </span> */}
-          <label>Confirm password</label>
-          <input
-            type="password"
-            className="form-control input-password"
-            placeholder="password"
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          {/* <span className="assword" onClick={showHide}>
-            {type === "input" ? <FiEye /> : <FiEye />}
-          </span> */}
-          <div className="mt-3 d-flex justify-content-between">
-            <h6>Password Strength</h6>
-            <p style={{ color: funcProgressColor() }}>{createPassLabel()}</p>
+        <div className="form-group label-password">
+          <div className="mt-2">
+            <label className="text-bold fw-bold">New password</label>
+            <input
+              type={type}
+              className="form-control input-password"
+              placeholder="password"
+              maxLength={12}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <span className="show-password" onClick={hideShow}>
+              {type === "input" ? <FiEye /> : <FiEye />}
+            </span>
           </div>
-          <div className="progress mt-2" style={{ height: "10px" }}>
+          <div className="mt-2">
+            <label className="text-bold fw-bold">Confirm password</label>
+            <input
+              type={type}
+              className="form-control input-password"
+              placeholder="password"
+              maxLength={12}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <span className="secondShow-password" onClick={showHide}>
+              {type === "input" ? <FiEye /> : <FiEye />}
+            </span>
+          </div>
+          <div className="mt-3 d-flex justify-content-between">
+            <p>Password Strength</p>
+            <p style={{ color: funcProgressColor(), fontWeight: "bold" }}>
+              {createPassLabel()}
+            </p>
+          </div>
+          <div className="progress" style={{ height: "10px" }}>
             <div className="progress-bar" style={changePasswordColor()}></div>
           </div>
         </div>
-        {/* <div className="label-password">
-          <input
-            type={type}
-            className="input-password"
-            onChange={testStrengthPassword}
-          />
-          <span className="show-password" onClick={showHide}>
-            {type === "input" ? "Hide" : "show"}
-          </span>
-          
-        </div> */}
-        <br />
-        <div>
-          <label className="label-password">
-            New password
-            <input
-              type={type}
-              className="input-password"
-              onChange={testStrengthPassword}
-              minlength="4"
-              maxlength="12"
-            />
-            <span className="show-password" onClick={showHide}>
-              {type === "input" ? <FiEye /> : <FiEye />}
-            </span>
-          </label>
-          <label className="label-password mt-5">
-            Confirm password
-            <input
-              type={type}
-              className="input-password"
-              onChange={testStrengthPassword}
-              minlength="4"
-              maxlength="12"
-            />
-            <span className="show-password" onClick={showHide}>
-              {type === "input" ? <FiEye /> : <FiEye />}
-            </span>
-          </label>
-
-          <span data-score={score} id="bar"></span>
-          {/* <Form>
-            <div className="">
-              <InputGroup>
-                <Form.Control
-                  aria-label="Large"
-                  aria-describedby="inputGroup-sizing-sm"
-                  type={type}
-                  className="input-password"
-                  onChange={testStrengthPassword}
-                  id="password"
-                />
-                <span className="show-password" onClick={showHide}>
-                  {type === "input" ? <FiEye /> : <FiEye />}
-                </span>
-              </InputGroup>
-            </div>
-
-            <label htmlFor="text" className="mt-3">
-              Confirm password
-            </label>
-
-            <div className="">
-              <InputGroup>
-                <Form.Control
-                  aria-label="Large"
-                  aria-describedby="inputGroup-sizing-sm"
-                  placeholder="********"
-                  id="password"
-                  type={type}
-                  className="input-password"
-                  onChange={testStrengthPassword}
-                />
-                <span className="show-password" onClick={showHide}>
-                  {type === "input" ? <FiEye /> : <FiEye />}
-                </span>
-                <span data-score={score} id="bar"></span>
-              </InputGroup>
-            </div>
-          </Form> */}
-        </div>
-
-        <div className="mt-5">
+        <div className="mt-2">
           <Form className="mt-1">
             <label className="pass-label1">
               <input

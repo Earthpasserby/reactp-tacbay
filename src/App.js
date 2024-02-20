@@ -13,6 +13,7 @@ import Signup from "./components/Signup";
 import Pagev from "./components/Pagev";
 import ProfileID from "./components/ProfileID";
 import Passwordpage from "./components/Passwordpage";
+import Houserule from "./components/Houserule";
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
         <Route path="/Pagev" element={<Pagev />} />
         <Route path="/ProfileID" element={<ProfileID />} />
         <Route path="/Passwordpage" element={<Passwordpage />} />
+        <Route path="/Houserule" element={<Houserule />} />
       </Routes>
     </BrowserRouter>
   );

@@ -29,7 +29,12 @@ function ProfileID() {
 
   return (
     <Container>
-      
+      <Image
+        src="./images/tacbay.png"
+        alt="logo"
+        className="mx-auto d-block img"
+      />
+
       <Row className="row mx-auto d-block mt-4">
         <h5 className="text-center f-heading">Create Your Profile</h5>
         <p className="text-center">Help us get to know you better. </p>
