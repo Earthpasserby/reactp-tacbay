@@ -34,7 +34,10 @@ const ResetPass = () => {
             />
           </div>
           <div className="d-grid mt-4">
-            <Button type="btn" className="text-center btn-lg border rounded-4 ">
+            <Button
+              type="btn"
+              className="text-center  btn-lg border rounded-4 "
+            >
               Continue
             </Button>
           </div>
@@ -42,7 +45,7 @@ const ResetPass = () => {
         </Col>
         <Col sm={7} className="Nav-img">
           <Image
-            src="./images/Container(1).png"
+            src="./images/Container (1).png"
             alt="logo"
             className="img-fluid text-center"
           />

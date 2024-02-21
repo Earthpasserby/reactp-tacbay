@@ -124,6 +124,7 @@ label {
   display: flex;
   gap: 20px;
 }
+
 .otp-area input {
   width: 56px;
   height: 56px;
@@ -365,4 +366,22 @@ label {
 .Nav-img {
   background: #77e2ff;
   padding: 20px;
+}
+/* VCode page/*/
+.otp-VCode {
+  width: 70%;
+
+  display: flex;
+  gap: 5px;
+}
+.otp-VCode input {
+  width: 56px;
+  height: 56px;
+  outline: none;
+
+  border-radius: 12px;
+  border: 2px solid #e4e7ec;
+  &:focus {
+    border: 2px solid black;
+  }
 }

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Row, Form, Button, Image, Col } from "react-bootstrap";
+import { Container, Row, Button, Image, Col } from "react-bootstrap";
 import { FiEye } from "react-icons/fi";
 import zxcvbn from "zxcvbn";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -68,14 +68,14 @@ const NavbarPage = () => {
     height: "10px",
   });
   return (
-    <Container fluid className="Nav-container">
-    
+    <Container fluid className="">
       <Row className="justify-content-center">
         <Col sm={5} className="Nav-password p-5">
-          <h5 className="">Create Your Password</h5>
+          <Image src="./images/tacbay.png" alt="logo" className="img-fluid" />
+
+          <h5 className="">Reset Password</h5>
           <p className="">
-            To ensure the security of your account, please create a robust
-            password.
+            The verification code has been arrived in you inbox.
           </p>
           <div className="form-group label-password">
             <div className="mt-2">
@@ -114,57 +114,10 @@ const NavbarPage = () => {
               <div className="progress-bar" style={changePasswordColor()}></div>
             </div>
           </div>
-          <div className="mt-2">
-            <Form className="mt-1">
-              <label className="pass-label1">
-                <input
-                  type="radio"
-                  value={"english"}
-                  className="me-1 pas-input "
-                />
-                Minimum 12 characters
-              </label>
-            </Form>
-          </div>
-          <div>
-            <Form className="mt-1">
-              <label className="pass-label1">
-                <input
-                  type="radio"
-                  value={"english"}
-                  className="me-1 pas-input"
-                />
-                Use a mix of uppercase and lowercase letters
-              </label>
-            </Form>
-          </div>
-          <div>
-            <Form className="mt-1">
-              <label className="pass-label1">
-                <input
-                  type="radio"
-                  value={"english"}
-                  className="me-1 pas-input "
-                />
-                Include at least one number
-              </label>
-            </Form>
-          </div>
-          <div>
-            <Form className="mt-1">
-              <label className="pass-label1">
-                <input
-                  type="radio"
-                  value={"english"}
-                  className="me-1 pas-input"
-                />
-                Add at least one special character (!@#$%)
-              </label>
-            </Form>
-          </div>
+
           <div className="d-grid mt-4">
             <Button type="btn" className="text-center btn-lg border rounded-4 ">
-              Create Account
+              Reset password
             </Button>
           </div>
         </Col>
