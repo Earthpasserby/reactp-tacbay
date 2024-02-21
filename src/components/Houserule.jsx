@@ -5,13 +5,13 @@ import { FaCheckCircle } from "react-icons/fa";
 
 const Houserule = () => {
   return (
-    <Container>
+    <Container className="kontainer">
       <Image
         src="./images/tacbay.png"
         alt="logo"
         className="mx-auto d-block img"
       />
-      <Row className=" mx-auto d-block mt-4">
+      <Row className="Row mx-auto d-block mt-4">
         <h6
           className="text-center H-heading"
           style={{ width: "457px", height: "32px" }}

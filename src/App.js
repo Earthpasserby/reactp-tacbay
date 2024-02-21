@@ -15,6 +15,7 @@ import ProfileID from "./components/ProfileID";
 import Passwordpage from "./components/Passwordpage";
 import Houserule from "./components/Houserule";
 import NavbarPage from "./components/NavbarPage";
+import ResetPass from "./components/ResetPass";
 
 export default function App() {
   return (
@@ -28,6 +29,7 @@ export default function App() {
         <Route path="/Passwordpage" element={<Passwordpage />} />
         <Route path="/Houserule" element={<Houserule />} />
         <Route path="/NavbarPage" element={<NavbarPage />} />
+        <Route path="/Resetpass" element={<ResetPass />} />
       </Routes>
     </BrowserRouter>
   );

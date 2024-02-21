@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Container, Row, Form, Button, Image, Col } from "react-bootstrap";
 import { FiEye } from "react-icons/fi";
 import zxcvbn from "zxcvbn";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const NavbarPage = () => {
   const [type, setType] = useState("input");
@@ -67,11 +68,12 @@ const NavbarPage = () => {
     height: "10px",
   });
   return (
-    <Container>
-      <Row>
-        <Col sm={6}>
-          <h5 className="text-center f-heading">Create Your Password</h5>
-          <p className="text-center">
+    <Container fluid className="Nav-container">
+    
+      <Row className="justify-content-center">
+        <Col sm={5} className="Nav-password p-5">
+          <h5 className="">Create Your Password</h5>
+          <p className="">
             To ensure the security of your account, please create a robust
             password.
           </p>
@@ -166,11 +168,11 @@ const NavbarPage = () => {
             </Button>
           </div>
         </Col>
-        <Col sm={6}>
+        <Col sm={7} className="Nav-img">
           <Image
-            src="./images/tacbay.png"
+            src="./images/Container.png"
             alt="logo"
-            className="mx-auto d-block img"
+            className="img-fluid text-center"
           />
         </Col>
       </Row>

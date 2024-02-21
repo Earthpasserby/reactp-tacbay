@@ -17,13 +17,13 @@ function Pagev() {
   }
 
   return (
-    <Container>
+    <Container className="kontainer">
       <Image
         src="./images/tacbay.png"
         alt="logo"
         className="mx-auto d-block img"
       />
-      <Row className="d-block mx-auto mt-2">
+      <Row className="Row d-block mx-auto mt-2">
         <h5 className="text-center f-heading">Verify Your Number</h5>
         <p className="pagev-p">
           We've sent a verification code to your phone number. Please enter the

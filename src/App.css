@@ -6,11 +6,11 @@
   box-sizing: border-box;
 }
 /* fpage page/*/
-.container {
+.kontainer {
   max-width: 80%;
   margin: 25px;
 }
-.row {
+.Row {
   width: 30%;
 }
 input {
@@ -353,3 +353,16 @@ label {
   }
 }
 
+/* NavbarPage page/*/
+.Nav-container {
+  margin-top: 50px;
+  padding: 20px;
+}
+
+.Nav-password {
+  padding: 80px, 16px, 0px, 216px;
+}
+.Nav-img {
+  background: #77e2ff;
+  padding: 20px;
+}

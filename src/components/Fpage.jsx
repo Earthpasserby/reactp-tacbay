@@ -5,13 +5,13 @@ import { Link } from "react-router-dom";
 
 function Fpage() {
   return (
-    <Container>
+    <Container className="kontainer">
       <Image
         src="./images/tacbay.png"
         alt="logo"
         className="mx-auto d-block img"
       />
-      <Row className="row mx-auto d-block mt-4">
+      <Row className="Row mx-auto d-block mt-4">
         <h5 className="text-center f-heading">Choose Your Language</h5>
         <Form className="mt-4">
           <label className="d-flex justify-content-between">
