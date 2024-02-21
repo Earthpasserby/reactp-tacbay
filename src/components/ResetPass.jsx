@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row, Form, Button, Image, Col } from "react-bootstrap";
+import { Container, Row, Button, Image, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
@@ -41,7 +41,9 @@ const ResetPass = () => {
               Continue
             </Button>
           </div>
-          <p className="text-center text-primary fw-bold">Back to login page</p>
+          <p className="text-center text-primary fw-bold">
+            Back to login screen
+          </p>
         </Col>
         <Col sm={7} className="Nav-img">
           <Image

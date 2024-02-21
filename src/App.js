@@ -17,6 +17,7 @@ import Houserule from "./components/Houserule";
 import NavbarPage from "./components/NavbarPage";
 import ResetPass from "./components/ResetPass";
 import VCode from "./components/VCode";
+import CreateAcc from "./components/CreateAcc";
 export default function App() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
@@ -31,6 +32,7 @@ export default function App() {
         <Route path="/NavbarPage" element={<NavbarPage />} />
         <Route path="/Resetpass" element={<ResetPass />} />
         <Route path="/VCode" element={<VCode />} />
+        <Route path="/CreateAcc" element={<CreateAcc />} />
       </Routes>
     </BrowserRouter>
   );
