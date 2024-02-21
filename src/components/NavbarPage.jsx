@@ -69,7 +69,7 @@ const NavbarPage = () => {
   return (
     <Container>
       <Row>
-        <Col>
+        <Col sm={6}>
           <h5 className="text-center f-heading">Create Your Password</h5>
           <p className="text-center">
             To ensure the security of your account, please create a robust
@@ -166,7 +166,7 @@ const NavbarPage = () => {
             </Button>
           </div>
         </Col>
-        <Col>
+        <Col sm={6}>
           <Image
             src="./images/tacbay.png"
             alt="logo"
