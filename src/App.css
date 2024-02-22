@@ -469,3 +469,42 @@ label {
   box-shadow: 2px darkgrey;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+/* Category page */
+.card-img{
+  width: 394px;
+height: 290px;
+border-radius: 16px;
+
+}
+.card-p {
+  padding: 2px, 8px, 2px, 8px;
+  border-radius: 999px;
+  border: 1px solid #ced2da;
+  gap: 8px;
+  background: #ced2da;
+}
+.card-p {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.card-p1 {
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.card-title {
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+}
