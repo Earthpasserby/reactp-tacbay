@@ -4,13 +4,10 @@ import {
   Navbar,
   Container,
   Nav,
-  NavDropdown,
   Button,
   FormControl,
   Form,
   InputGroup,
-  Dropdown,
-  Image,
 } from "react-bootstrap";
 
 const NavBar = () => {

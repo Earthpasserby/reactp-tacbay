@@ -20,6 +20,7 @@ import VCode from "./components/VCode";
 import CreateAcc from "./components/CreateAcc";
 import NavBar from "./components/NavBar";
 import MainPage from "./components/MainPage";
+import Category from "./components/Category";
 export default function App() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
@@ -37,6 +38,7 @@ export default function App() {
         <Route path="/CreateAcc" element={<CreateAcc />} />
         <Route path="/NavBar" element={<NavBar />} />
         <Route path="/MainPage" element={<MainPage />} />
+        <Route path="/Category" element={<Category />} />
       </Routes>
     </BrowserRouter>
   );
