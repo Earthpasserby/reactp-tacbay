@@ -18,6 +18,8 @@ import NavbarPage from "./components/NavbarPage";
 import ResetPass from "./components/ResetPass";
 import VCode from "./components/VCode";
 import CreateAcc from "./components/CreateAcc";
+import NavBar from "./components/NavBar";
+import MainPage from "./components/MainPage";
 export default function App() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
@@ -33,6 +35,8 @@ export default function App() {
         <Route path="/Resetpass" element={<ResetPass />} />
         <Route path="/VCode" element={<VCode />} />
         <Route path="/CreateAcc" element={<CreateAcc />} />
+        <Route path="/NavBar" element={<NavBar />} />
+        <Route path="/MainPage" element={<MainPage />} />
       </Routes>
     </BrowserRouter>
   );
