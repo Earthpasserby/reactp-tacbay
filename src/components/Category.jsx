@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Container, Col, Row, Card, Button } from "react-bootstrap";
+import { Container, Col, Row, Card, Button, Image } from "react-bootstrap";
 import { IoLocationOutline } from "react-icons/io5";
 import { RiStarSFill } from "react-icons/ri";
 import { VscArrowSmallRight } from "react-icons/vsc";
@@ -777,6 +777,32 @@ const Category = () => {
               </div>
             </div>
           </Col>
+        </Row>
+      </Container>
+      <Container className="mt-5">
+        <Image
+          src="./images/tacbay.png"
+          alt="logo"
+          className="mx-auto d-block img"
+        />
+        <Row>
+          <div className="d-flex justify-content-center">
+            <p>
+              <a href="/">About</a>
+            </p>
+            <p className="me-1">
+              <a href="/">Contact Us</a>
+            </p>
+            <p>
+              <a href="/">FAQs</a>
+            </p>
+            <p>
+              <a href="/">Terms & Conditions</a>
+            </p>
+            <p>
+              <a href="/">Privacy Policy</a>
+            </p>
+          </div>
         </Row>
       </Container>
     </>
