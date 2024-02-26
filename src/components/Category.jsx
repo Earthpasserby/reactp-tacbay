@@ -786,22 +786,49 @@ const Category = () => {
           className="mx-auto d-block img"
         />
         <Row>
-          <div className="d-flex justify-content-center">
-            <p>
-              <a href="/">About</a>
-            </p>
-            <p className="me-1">
-              <a href="/">Contact Us</a>
-            </p>
-            <p>
-              <a href="/">FAQs</a>
-            </p>
-            <p>
-              <a href="/">Terms & Conditions</a>
-            </p>
-            <p>
-              <a href="/">Privacy Policy</a>
-            </p>
+          <div
+            className="d-flex mt-3 justify-content-center p-1"
+            style={{ width: "658px", height: "24px", gap: "64px" }}
+          >
+            <a
+              href="/"
+              className="me-2"
+              style={{ width: "43px", height: "24px" }}
+            >
+              <p>About</p>
+            </a>
+
+            <a
+              href="/"
+              className="me-2"
+              style={{ width: "79px", height: "24px" }}
+            >
+              <p>Contact Us</p>
+            </a>
+
+            <a
+              href="/"
+              className="me-2"
+              style={{ width: "38px", height: "24px" }}
+            >
+              <p>FAQs</p>
+            </a>
+
+            <a
+              href="/"
+              className="me-2"
+              style={{ width: "141px", height: "24px" }}
+            >
+              <p>Terms & Conditions</p>
+            </a>
+
+            <a
+              href="/"
+              className="me-2"
+              style={{ width: "101px", height: "24px" }}
+            >
+              <p>Privacy Policy</p>
+            </a>
           </div>
         </Row>
       </Container>
