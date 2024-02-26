@@ -4,7 +4,10 @@ import { Container, Col, Row, Card, Button, Image } from "react-bootstrap";
 import { IoLocationOutline } from "react-icons/io5";
 import { RiStarSFill } from "react-icons/ri";
 import { VscArrowSmallRight } from "react-icons/vsc";
-
+import { LiaInstagram } from "react-icons/lia";
+import { CiFacebook } from "react-icons/ci";
+import { TfiTwitter } from "react-icons/tfi";
+import { TiSocialLinkedinCircular } from "react-icons/ti";
 const Category = () => {
   return (
     <>
@@ -731,7 +734,7 @@ const Category = () => {
       </Container>
       <Container>
         <Row>
-          <Col sm={6}>
+          <Col xs={12}>
             <div className="mt-5 tron">
               <div className="ton p-5">
                 <h4>Become a service provider on Tacbay</h4>
@@ -756,7 +759,7 @@ const Category = () => {
       </Container>
       <Container>
         <Row>
-          <Col sm={6}>
+          <Col xs={12}>
             <div className="mt-5 tron2">
               <div className="ton2 p-5">
                 <h4>Get Skilled Assistance</h4>
@@ -779,59 +782,63 @@ const Category = () => {
           </Col>
         </Row>
       </Container>
-      <Container className="mt-5">
-        <Image
-          src="./images/tacbay.png"
-          alt="logo"
-          className="mx-auto d-block img"
-        />
-        <Row>
-          <div
-            className="d-flex mt-3 justify-content-center p-1"
-            style={{ width: "658px", height: "24px", gap: "64px" }}
-          >
-            <a
-              href="/"
-              className="me-2"
-              style={{ width: "43px", height: "24px" }}
-            >
-              <p>About</p>
-            </a>
 
-            <a
-              href="/"
-              className="me-2"
-              style={{ width: "79px", height: "24px" }}
-            >
-              <p>Contact Us</p>
-            </a>
-
-            <a
-              href="/"
-              className="me-2"
-              style={{ width: "38px", height: "24px" }}
-            >
-              <p>FAQs</p>
-            </a>
-
-            <a
-              href="/"
-              className="me-2"
-              style={{ width: "141px", height: "24px" }}
-            >
-              <p>Terms & Conditions</p>
-            </a>
-
-            <a
-              href="/"
-              className="me-2"
-              style={{ width: "101px", height: "24px" }}
-            >
-              <p>Privacy Policy</p>
-            </a>
-          </div>
-        </Row>
-      </Container>
+      <footer className="text-light mt-5">
+        <Container className="mb-1">
+          <Image
+            src="./images/tacbay.png"
+            alt="logo"
+            className="mx-auto d-block img"
+          />
+          <Row className="mt-4 justify-content-center">
+            <Col xs={12} md={2} className="mb-3">
+              <a href="/" className="me-2">
+                <p>About</p>
+              </a>
+            </Col>
+            <Col xs={12} md={2} className="mb-3">
+              <a href="/" className="me-2">
+                <p>Contact Us</p>
+              </a>
+            </Col>
+            <Col xs={12} md={2} className="mb-3">
+              <a href="/" className="me-2">
+                <p>FAQs</p>
+              </a>
+            </Col>
+            <Col xs={12} md={2} className="mb-3">
+              <a href="/" className="me-2">
+                <p>Terms & Conditions</p>
+              </a>
+            </Col>
+            <Col xs={12} md={2} className="mb-3">
+              <a href="/" className="me-2">
+                <p>Privacy Policy</p>
+              </a>
+            </Col>
+          </Row>
+        </Container>
+        <Container>
+          <Row>
+            <h3 className="text-dark text-center">Stay in touch</h3>
+            <div className="d-flex justify-content-center">
+              <a href="/" className="me-3 fs-3">
+                <LiaInstagram />
+              </a>
+              <a href="/" className="me-3 fs-3">
+                <CiFacebook />
+              </a>
+              <a href="/" className="me-3 fs-3">
+                <TfiTwitter />
+              </a>
+              <a href="/" className="me-3 fs-3">
+                {" "}
+                <TiSocialLinkedinCircular />
+              </a>
+            </div>
+          </Row>
+        </Container>
+      </footer>
     </>
   );
 };

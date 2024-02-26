@@ -584,3 +584,14 @@ label {
   text-align: left;
   color: #ffffff;
 }
+
+footer a {
+  text-decoration: none;
+  color: #344051;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+}
