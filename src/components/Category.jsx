@@ -792,27 +792,27 @@ const Category = () => {
           />
           <Row className="mt-4 justify-content-center">
             <Col xs={12} md={2} className="mb-3">
-              <a href="/" className="me-2">
+              <a href="/">
                 <p>About</p>
               </a>
             </Col>
-            <Col xs={12} md={2} className="mb-3">
-              <a href="/" className="me-2">
+            <Col xs={12} md={2} className="mb-2">
+              <a href="/">
                 <p>Contact Us</p>
               </a>
             </Col>
-            <Col xs={12} md={2} className="mb-3">
-              <a href="/" className="me-2">
+            <Col xs={12} md={2} className="mb-2">
+              <a href="/">
                 <p>FAQs</p>
               </a>
             </Col>
-            <Col xs={12} md={2} className="mb-3">
-              <a href="/" className="me-2">
+            <Col xs={12} md={2} className="mb-2">
+              <a href="/">
                 <p>Terms & Conditions</p>
               </a>
             </Col>
-            <Col xs={12} md={2} className="mb-3">
-              <a href="/" className="me-2">
+            <Col xs={12} md={2} className="mb-2">
+              <a href="/">
                 <p>Privacy Policy</p>
               </a>
             </Col>
@@ -836,6 +836,24 @@ const Category = () => {
                 <TiSocialLinkedinCircular />
               </a>
             </div>
+            <div className="text-center mt-3">
+              <a href="/">
+                <Image
+                  src="./images/google app.png"
+                  alt="google playstore logo"
+                />
+              </a>
+              <a href="/">
+                <Image
+                  src="./images/apple store.png"
+                  alt="google playstore logo"
+                />
+              </a>
+            </div>
+
+            <p className="text-center text-dark mt-3 copy">
+              &copy; {new Date().getFullYear()} Tacbay.
+            </p>
           </Row>
         </Container>
       </footer>

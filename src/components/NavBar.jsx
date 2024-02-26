@@ -1,49 +1,93 @@
-import React from "react";
+import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
-  Navbar,
-  Container,
-  Nav,
   Button,
-  FormControl,
-  Form,
+  Container,
+  Image,
+  Navbar,
+  Nav,
   InputGroup,
+  Form,
 } from "react-bootstrap";
+import { IoLocationOutline } from "react-icons/io5";
+import { BsBrightnessHigh } from "react-icons/bs";
 
 const NavBar = () => {
+  const [selectedOption, setSelectedOption] = useState("");
+
+  const handleChange = (event) => {
+    setSelectedOption(event.target.value);
+  };
+
   return (
-    <Navbar bg="light" expand="lg">
-      <Container>
-        <Navbar.Brand href="#">Navbar</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+    <>
+      <Navbar>
+        <Container>
+          <Navbar.Brand href="#">
+            <Image src="./images/tacbay.png" alt="logo" className="img-fluid" />
+          </Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="#">
-              <Form className="d-flex" style={{ width: "100px" }}>
-                <InputGroup style={{ width: "1400px" }}>
-                  <Form.Control placeholder="Username">
-                    <option>Select...</option>
-                    <option>Option 1</option>
-                    <option>Option 2</option>
-                    <option>Option 3</option>
-                  </Form.Control>
-                </InputGroup>
-              </Form>
+            <Nav.Link href="#features">
+              <InputGroup>
+                <InputGroup.Text>
+                  <IoLocationOutline />
+                </InputGroup.Text>
+                <Form.Select
+                  value={selectedOption}
+                  onChange={handleChange}
+                  style={{
+                    width: "300px",
+                    backgroundColor: "#f0f0f0",
+                    color: "#333",
+                  }}
+                >
+                  <h6>Recent Location</h6>
+                  <option value="">Location</option>
+                  <option value="1">Abuja </option>
+                  <option value="2">Ikeja</option>
+                  <option value="3">Ogun</option>
+                  <option value="4">Gariki</option>
+                  <option value="5">Lagos</option>
+                </Form.Select>
+              </InputGroup>
+            </Nav.Link>
+            <Nav.Link href="#features">
+              <InputGroup>
+                <InputGroup.Text>
+                  <IoLocationOutline />
+                </InputGroup.Text>
+                <Form.Select
+                  value={selectedOption}
+                  onChange={handleChange}
+                  style={{
+                    width: "450px",
+                    backgroundColor: "#f0f0f0",
+                    color: "#333",
+                  }}
+                >
+                  <h6>Recent Location</h6>
+                  <option value="">Location</option>
+                  <option value="1">Abuja </option>
+                  <option value="2">Ikeja</option>
+                  <option value="3">Ogun</option>
+                  <option value="4">Gariki</option>
+                  <option value="5">Lagos</option>
+                </Form.Select>
+              </InputGroup>
+            </Nav.Link>
+            <Nav.Link className="toogle-icon mt-2">
+              <BsBrightnessHigh />
             </Nav.Link>
           </Nav>
-          <InputGroup style={{ width: "400px" }}>
-            <FormControl placeholder="Username" />
-            <Button variant="primary">Search</Button>
-          </InputGroup>
-          <div className="d-flex">
-            <Button variant="light" className="me-2">
+          <Nav className="">
+            <Button variant="outline-success" className="me-2">
               Login
             </Button>
-            <Button variant="dark">Sign Up</Button>
-          </div>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+            <Button className="me-2">Sign Up</Button>
+          </Nav>
+        </Container>
+      </Navbar>
+    </>
   );
 };
 export default NavBar;

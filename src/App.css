@@ -352,7 +352,15 @@ label {
   .cont {
     padding-top: 20px;
   }
-  /* CreateAcc page/*/
+  /* Category page/*/
+  .ton {
+    width: 794px;
+    height: 280px;
+    top: 46px;
+    left: 73px;
+    padding: 0px, 24px, 0px, 24px;
+    justify-content: space-between;
+  }
 }
 
 /* NavbarPage page/*/
@@ -509,7 +517,7 @@ label {
 }
 
 .tron {
-  width: 1216px;
+  /* width: 1216px; */
   height: 377px;
   border-radius: 48px;
   background: #0095be;
@@ -531,7 +539,7 @@ label {
   line-height: 60px;
   letter-spacing: 0em;
   text-align: left;
-  width: 586px;
+  /* width: 586px; */
   height: 120px;
 }
 
@@ -547,7 +555,7 @@ label {
 }
 
 .tron2 {
-  width: 1216px;
+  /* width: 1216px; */
   height: 377px;
   border-radius: 48px;
   background: #cca100;
@@ -594,4 +602,14 @@ footer a {
   line-height: 24px;
   letter-spacing: 0em;
   text-align: left;
+}
+
+.copy {
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #637083;
 }
