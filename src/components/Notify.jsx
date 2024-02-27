@@ -6,7 +6,7 @@ const Notify = () => {
     <Container className="mt-5">
       <h4>Settings</h4>
       <p>Manage your team members and their account permissions here.</p>
-      <Row className="mt-4 p-4">
+      <Row className="mt-4 p-3">
         <Col sm={6} md={4}>
           <a href="/">
             <p> Personal info</p>
@@ -28,38 +28,95 @@ const Notify = () => {
           </a>
         </Col>
         <Col sm={6} md={8}>
-          <h6>Appearance</h6>
+          <h6>Notifications</h6>
           <hr />
-          <Row>
-            <Col className="text-center">
-              {" "}
-              <Image
-                src="./images/Lightgrey.png"
-                alt="logo"
-                className="img-fluid"
-              />
-              <p>Lightgrey</p>
-            </Col>
-            <Col className="text-center">
-              <Image src="./images/Ligt.png" alt="logo" className="img-fluid" />
-              <p>Light</p>
-            </Col>
-            <Col className="text-center">
-              <Image src="./images/dark.png" alt="logo" className="img-fluid" />
-              <p>Grey</p>
-            </Col>
-          </Row>
-
-          <div className="mt-4">
-            <Button
-              type="btn"
-              className="text-center btn-primary border rounded-2"
-            >
-              Save
-            </Button>
-            <Button type="btn" className="text-center btn-light mx-4">
-              Cancel
-            </Button>
+          <div className="card border border-3">
+            <div className="card-header d-flex justify-content-between">
+              <h6>Notifications</h6>
+              <h6>Mobile</h6>
+            </div>
+            <div className="card-body ">
+              <div className="d-flex justify-content-between">
+                <div>
+                  <h6>Account Notifications</h6>
+                  <p>Receive notifications about account-related updates</p>
+                </div>
+                <div>
+                  <label class="switch">
+                    <input type="checkbox" />
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+              </div>
+              <div className="d-flex justify-content-between">
+                <div>
+                  <h6>Support Notifications</h6>
+                  <p>
+                    Receive notifications about support-related issues or
+                    updates
+                  </p>
+                </div>
+                <div>
+                  <label class="switch">
+                    <input type="checkbox" />
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+              </div>
+              <div className="d-flex justify-content-between">
+                <div>
+                  <h6>Security Notifications</h6>
+                  <p>Receive notifications about security-related updates</p>
+                </div>
+                <div>
+                  <label class="switch">
+                    <input type="checkbox" />
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+              </div>
+              <div className="d-flex justify-content-between">
+                <div>
+                  <h6>Upgrade Notifications</h6>
+                  <p>
+                    Receive notifications about upgrades to your account or
+                    subscription
+                  </p>
+                </div>
+                <div>
+                  <label class="switch">
+                    <input type="checkbox" />
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+              </div>
+              <div className="d-flex justify-content-between">
+                <div>
+                  <h6>Feedback Notifications</h6>
+                  <p>Receive notifications about user feedback or surveys</p>
+                </div>
+                <div>
+                  <label class="switch">
+                    <input type="checkbox" />
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+              </div>
+              <div className="d-flex justify-content-between">
+                <div>
+                  <h6>Announcement Notifications</h6>
+                  <p>
+                    Receive notifications about company announcements or updates
+                  </p>
+                </div>
+                <div>
+                  <label class="switch">
+                    <input type="checkbox" />
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
           </div>
           <hr />
         </Col>
