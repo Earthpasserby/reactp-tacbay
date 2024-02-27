@@ -11,6 +11,7 @@ import {
 } from "react-bootstrap";
 import Category from "./Category";
 import { IoLocationOutline } from "react-icons/io5";
+import NavBar from "./NavBar";
 
 const MainPage = () => {
   const [selectedOption, setSelectedOption] = useState("");
@@ -21,6 +22,7 @@ const MainPage = () => {
 
   return (
     <>
+      <NavBar />
       <Container className="image-container">
         <Row className="mt-5">
           <Col sm={12}>

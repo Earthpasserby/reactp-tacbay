@@ -613,3 +613,13 @@ footer a {
   text-align: left;
   color: #637083;
 }
+.show-password2 {
+  cursor: pointer;
+  position: absolute;
+  top: 30px;
+  height: 16px;
+  right: 350px;
+  padding: 4px 29px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}

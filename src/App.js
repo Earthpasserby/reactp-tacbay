@@ -21,6 +21,7 @@ import CreateAcc from "./components/CreateAcc";
 import NavBar from "./components/NavBar";
 import MainPage from "./components/MainPage";
 import Category from "./components/Category";
+import Settings from "./components/Settings";
 export default function App() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
@@ -39,6 +40,7 @@ export default function App() {
         <Route path="/NavBar" element={<NavBar />} />
         <Route path="/MainPage" element={<MainPage />} />
         <Route path="/Category" element={<Category />} />
+        <Route path="/Settings" element={<Settings />} />
       </Routes>
     </BrowserRouter>
   );

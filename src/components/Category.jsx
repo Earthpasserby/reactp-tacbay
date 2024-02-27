@@ -8,6 +8,7 @@ import { LiaInstagram } from "react-icons/lia";
 import { CiFacebook } from "react-icons/ci";
 import { TfiTwitter } from "react-icons/tfi";
 import { TiSocialLinkedinCircular } from "react-icons/ti";
+
 const Category = () => {
   return (
     <>
