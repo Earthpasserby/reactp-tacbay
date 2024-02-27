@@ -24,6 +24,8 @@ import Category from "./components/Category";
 import Settings from "./components/Settings";
 import Lang from "./components/Lang";
 import Appearance from "./components/Appearance";
+import Changepass from "./components/Changepass";
+import Notify from "./components/Notify";
 export default function App() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
@@ -45,6 +47,8 @@ export default function App() {
         <Route path="/Settings" element={<Settings />} />
         <Route path="/Lang" element={<Lang />} />
         <Route path="/Appearance" element={<Appearance />} />
+        <Route path="/Changepass" element={<Changepass />} />
+        <Route path="/Notify" element={<Notify />} />
       </Routes>
     </BrowserRouter>
   );

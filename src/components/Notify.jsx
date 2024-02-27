@@ -1,8 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col, Image, Button } from "react-bootstrap";
-
-const Appearance = () => {
+const Notify = () => {
   return (
     <Container className="mt-5">
       <h4>Settings</h4>
@@ -68,4 +67,4 @@ const Appearance = () => {
     </Container>
   );
 };
-export default Appearance;
+export default Notify;
