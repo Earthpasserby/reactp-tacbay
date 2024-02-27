@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Container, Row, Col, Button, InputGroup, Form } from "react-bootstrap";
+import { Container, Row, Col, Image } from "react-bootstrap";
 
 const Appearance = () => {
   return (
@@ -32,9 +32,28 @@ const Appearance = () => {
           <h6>Appearance</h6>
           <hr />
           <Row>
-            <Col></Col>
-            <Col></Col>
-            <Col></Col>
+            <Col>
+              {" "}
+              <Image
+                src="./images/Lightgrey.png"
+                alt="logo"
+                className="img-fluid"
+              />
+            </Col>
+            <Col>
+              <Image
+                src="./images/Light.png"
+                alt="logo"
+                className="img-fluid"
+              />
+            </Col>
+            <Col>
+              <Image
+                src="./images/dark.png"
+                alt="logo"
+                className="img-fluid"
+              />
+            </Col>
           </Row>
 
           <hr />
