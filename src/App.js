@@ -23,6 +23,7 @@ import MainPage from "./components/MainPage";
 import Category from "./components/Category";
 import Settings from "./components/Settings";
 import Lang from "./components/Lang";
+import Appearance from "./components/Appearance";
 export default function App() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
@@ -43,6 +44,7 @@ export default function App() {
         <Route path="/Category" element={<Category />} />
         <Route path="/Settings" element={<Settings />} />
         <Route path="/Lang" element={<Lang />} />
+        <Route path="/Appearance" element={<Appearance />} />
       </Routes>
     </BrowserRouter>
   );
