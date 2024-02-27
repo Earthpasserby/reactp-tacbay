@@ -22,6 +22,7 @@ import NavBar from "./components/NavBar";
 import MainPage from "./components/MainPage";
 import Category from "./components/Category";
 import Settings from "./components/Settings";
+import Lang from "./components/Lang";
 export default function App() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
@@ -41,6 +42,7 @@ export default function App() {
         <Route path="/MainPage" element={<MainPage />} />
         <Route path="/Category" element={<Category />} />
         <Route path="/Settings" element={<Settings />} />
+        <Route path="/Lang" element={<Lang />} />
       </Routes>
     </BrowserRouter>
   );

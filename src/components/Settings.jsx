@@ -11,10 +11,10 @@ const Settings = () => {
   };
   return (
     <>
-      <Container>
+      <Container className="mt-5">
         <h4>Settings</h4>
         <p>Manage your team members and their account permissions here.</p>
-        <Row>
+        <Row className="mt-4 p-4">
           <Col sm={6} md={4}>
             <a href="/">
               <p> Personal info</p>
