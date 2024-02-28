@@ -10,6 +10,7 @@ import {
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BsUpload } from "react-icons/bs"; // Assuming you're using react-icons for the upload icon
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function ProfileID() {
   const [image, setImage] = useState(null);

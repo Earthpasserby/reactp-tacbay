@@ -94,9 +94,11 @@ label {
   line-height: 24px;
   letter-spacing: 0em;
   text-align: left;
+  color: #344051;
 }
 .Button {
   width: 110%;
+  color: #0095be;
 }
 /* Pagev page/*/
 .pagev-p {

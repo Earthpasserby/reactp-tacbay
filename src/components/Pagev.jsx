@@ -19,19 +19,19 @@ function Pagev() {
   }
 
   return (
-    <Container className="kontainer">
+    <Container className="kontainer mt-5">
       <Image
         src="./images/tacbay.png"
         alt="logo"
-        className="mx-auto d-block img"
+        className="mx-auto d-block mx-4 img"
       />
-      <Row className="Row d-block mx-auto mt-2">
-        <h5 className="text-center f-heading">Verify Your Number</h5>
+      <Row className="Row d-block mx-auto mt-3 ">
+        <h5 className="text-center f-heading fw-bold">Verify Your Number</h5>
         <p className="pagev-p">
           We've sent a verification code to your phone number. Please enter the
           code to continue.
         </p>
-        <div className="otp-area">
+        <div className="otp-area pe-4">
           {otp.map((data, i) => {
             return (
               <input
@@ -43,12 +43,17 @@ function Pagev() {
             );
           })}
         </div>
-        <div className="d-grid mt-4">
-          <Button type="btn" className="text-center  btn-lg border rounded-4 ">
-            Continue
-          </Button>
-        </div>
-        <p className="mt-1 my-2 text-center pagev-p2">
+        <Link to="/ProfileID">
+          <div className="d-grid mt-4">
+            <Button
+              type="btn"
+              className="text-center  btn-lg border rounded-4 "
+            >
+              Continue
+            </Button>
+          </div>
+        </Link>
+        <p className="mt-1 my-2 text-center pagev-p fw-bold">
           You did not receive the code?
           <span className="text-primary mx-1 fs-6 fw-semibold">Send again</span>
         </p>
@@ -59,7 +64,7 @@ function Pagev() {
             className="text-center btn-lg  border rounded-4 "
           >
             <FaArrowLeft />
-            <span className="mx-2 button-text">Back to the main page</span>
+            <span className="mx-2 button-text ">Back to the main page</span>
           </Button>
         </div>
       </Row>
