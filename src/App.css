@@ -279,6 +279,15 @@ label {
   display: flex;
   align-items: top;
 }
+.cont p {
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #141c24;
+}
 .fa {
   margin-right: 5px;
 }
@@ -402,7 +411,7 @@ label {
 .CreateAcc-password {
   display: block;
   text-transform: none;
-  width: 120%;
+  width: 130%;
   height: 50px;
   border-radius: 8px;
 }

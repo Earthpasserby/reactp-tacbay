@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Container, Row, Button, Image, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FaArrowLeft } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const VCode = () => {
   const [otp, setOtp] = useState(new Array(5).fill(""));
@@ -39,17 +40,28 @@ const VCode = () => {
               );
             })}
           </div>
-          <div className="d-grid mt-4">
-            <Button
-              type="btn"
-              className="text-center  btn-lg border rounded-4 "
-            >
-              Continue
-            </Button>
-          </div>
+          <Link to="/NavbarPage">
+            <div className="d-grid mt-4">
+              <Button
+                type="btn"
+                className="text-center  btn-lg border rounded-4 "
+                style={{
+                  height: "56px",
+                  background: "#0095BE",
+                }}
+              >
+                Continue
+              </Button>
+            </div>
+          </Link>
           <p className="mt-1 my-2 text-center pagev-p2">
             You did not receive the code?
-            <span className="text-primary mx-1 fs-6 fw-semibold">
+            <span
+              className="mx-1 fs-6 fw-semibold"
+              style={{
+                color: "#0095BE",
+              }}
+            >
               Send again
             </span>
           </p>

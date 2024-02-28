@@ -8,7 +8,7 @@ import "react-phone-input-2/lib/style.css";
 import { FaFacebook } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
-
+import { Link } from "react-router-dom";
 const CreateAcc = () => {
   const [type, setType] = useState("input");
   const hideShow = (e) => {
@@ -49,13 +49,13 @@ const CreateAcc = () => {
   }, [Number]);
   return (
     <Container fluid className="">
-      <Row className="justify-content-center">
+      <Row className="justify-content-center ">
         <Col sm={5} className="Nav-password p-5">
           <Image src="./images/tacbay.png" alt="logo" className="img-fluid" />
 
-          <h5 className="">Reset Password</h5>
-          <p className="">
-            The verification code has been arrived in you inbox.
+          <h5 className="">It’s nice to see you again!</h5>
+          <p className=" fw-semibold" style={{ color: "#344051" }}>
+            Log in to continue to your account{" "}
           </p>
           <div className="form-group label-password">
             <div>
@@ -64,7 +64,7 @@ const CreateAcc = () => {
               </label>
               <PhoneInput
                 className="mt-0"
-                inputClass=" w-100 border rounded-3 p-4 m-3 "
+                inputClass="w-100 border rounded-3 p-4 m-3 "
                 country={country}
                 placeholder="Enter Phone Number"
                 onChange={(value) => {
@@ -83,30 +83,53 @@ const CreateAcc = () => {
                 maxLength={12}
                 onChange={(e) => setPassword(e.target.value)}
               />
-              <span className="" onClick={hideShow}>
+              {/* <span className="" onClick={hideShow}>
                 {type === "input" ? <FiEye /> : <FiEye />}
-              </span>
+              </span> */}
             </div>
 
             <div>
               <div className="mt-2 d-flex justify-content-between">
-                <p> Remember me</p>
-                <p className="text-primary fw-bold">Forgot password?</p>
-              </div>
-              <div className="d-grid ">
-                <Button
-                  type="btn"
-                  className="text-center btn-lg border rounded-4 "
+                <p className="fw-semibold" style={{ color: "#344051" }}>
+                  {" "}
+                  Remember me
+                </p>
+                <p
+                  className="fw-bold"
+                  style={{
+                    color: "#0095BE",
+                  }}
                 >
-                  Log in
-                </Button>
+                  Forgot password?
+                </p>
               </div>
+              <Link to="/Resetpass">
+                <div className="d-grid ">
+                  <Button
+                    type="btn"
+                    className="text-center btn-lg border rounded-4 "
+                    style={{
+                      height: "56px",
+                      background: "#0095BE",
+                    }}
+                  >
+                    Log in
+                  </Button>
+                </div>
+              </Link>
             </div>
           </div>
           <div>
             <p className="mt-2 my-4 f-p">
               Don't have an account?{" "}
-              <span className="text-primary fw-bold">Sign up!</span>
+              <span
+                className="fw-bold"
+                style={{
+                  color: "#0095BE",
+                }}
+              >
+                Sign up!
+              </span>
             </p>
             <h6 className="f-line2 w-100">OR</h6>
           </div>

@@ -3,6 +3,7 @@ import { Container, Row, Button, Image, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import { Link } from "react-router-dom";
 
 const ResetPass = () => {
   const [country, setCountry] = useState("us");
@@ -33,15 +34,26 @@ const ResetPass = () => {
               countryCodeEditable={false}
             />
           </div>
-          <div className="d-grid mt-4">
-            <Button
-              type="btn"
-              className="text-center  btn-lg border rounded-4 "
-            >
-              Continue
-            </Button>
-          </div>
-          <p className="text-center text-primary fw-bold">
+          <Link to="/VCode">
+            <div className="d-grid mt-4">
+              <Button
+                type="btn"
+                className="text-center  btn-lg border rounded-4 "
+                style={{
+                  height: "56px",
+                  background: "#0095BE",
+                }}
+              >
+                Continue
+              </Button>
+            </div>
+          </Link>
+          <p
+            className="text-center fw-bold "
+            style={{
+              color: "#0095BE",
+            }}
+          >
             Back to login screen
           </p>
         </Col>

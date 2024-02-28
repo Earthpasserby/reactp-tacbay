@@ -3,6 +3,7 @@ import { Container, Row, Button, Image, Col } from "react-bootstrap";
 import { FiEye } from "react-icons/fi";
 import zxcvbn from "zxcvbn";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Link } from "react-router-dom";
 
 const NavbarPage = () => {
   const [type, setType] = useState("input");
@@ -115,11 +116,20 @@ const NavbarPage = () => {
             </div>
           </div>
 
-          <div className="d-grid mt-4">
-            <Button type="btn" className="text-center btn-lg border rounded-4 ">
-              Reset password
-            </Button>
-          </div>
+          <Link to="/MainPage">
+            <div className="d-grid mt-4">
+              <Button
+                type="btn"
+                className="text-center btn-lg border rounded-4 "
+                style={{
+                  height: "56px",
+                  background: "#0095BE",
+                }}
+              >
+                Reset password
+              </Button>
+            </div>
+          </Link>
         </Col>
         <Col sm={7} className="Nav-img">
           <Image
