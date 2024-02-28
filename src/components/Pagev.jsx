@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Container, Image, Row, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FaArrowLeft } from "react-icons/fa6";
+import { Link } from "react-router-dom";
+
 function Pagev() {
   const [otp, setOtp] = useState(new Array(5).fill(""));
   function handlechange(e, index) {

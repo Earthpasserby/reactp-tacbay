@@ -6,6 +6,7 @@ import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import { Link } from "react-router-dom";
 
 function Signup() {
   const [country, setCountry] = useState("us");
@@ -14,14 +15,14 @@ function Signup() {
     console.log(Number);
   }, [Number]);
   return (
-    <Container className="kontainer">
+    <Container className="kontainer mt-5">
       <Image
         src="./images/tacbay.png"
         alt="logo"
         className="mx-auto d-block img"
       />
-      <Row className="Row  mx-auto d-block mt-4">
-        <h5 className="text-center f-heading">Create Account</h5>
+      <Row className="Row  mx-auto d-block mt-5">
+        <h5 className="text-center f-heading fw-bold">Create Account</h5>
         <p className="f-p2">Get started by entering your mobile phone number</p>
         <div>
           <label htmlFor="number">Phone Number</label>
@@ -37,22 +38,25 @@ function Signup() {
             countryCodeEditable={false}
           />
         </div>
-        <div className="mt-3">
+        <div className="mt-3 fw-medium">
           <p>
             <input type="checkbox" className="f-input" /> I agree to Tacbay's
             <span className="text-primary"> Terms of Service,</span> and
             acknowledge the
             <span className="text-primary"> Privacy Policy.</span>
           </p>
-          <div className="d-grid mt-4">
-            <Button
-              type="btn"
-              className="text-center Button btn-lg border rounded-4 "
-            >
-              Create Account
-            </Button>
-          </div>
-          <p className="mt-2 my-4 f-p">
+          <Link to="/Pagev">
+            <div className="d-grid mt-4">
+              <Button
+                type="btn"
+                className="text-center Button btn-lg border rounded-4 "
+              >
+                Create Account
+              </Button>
+            </div>
+          </Link>
+
+          <p className="mt-2 my-4 f-p fw-semibold">
             Already have an account?{" "}
             <span className="text-primary">Log in</span>
           </p>

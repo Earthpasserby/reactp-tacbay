@@ -7,7 +7,6 @@ import {
   Navbar,
   Nav,
   InputGroup,
-  FormControl,
   Row,
   Col,
   Form,
@@ -16,7 +15,10 @@ import { IoLocationOutline } from "react-icons/io5";
 import { BsBrightnessHigh } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
-const NavBar = () => {
+const NavBar = ({ theme, setTheme }) => {
+  const toogle_mode = () => {
+    theme === "light" ? setTheme("dark") : setTheme("light");
+  };
   const [selectedOption, setSelectedOption] = useState("");
 
   const handleChange = (event) => {
@@ -37,7 +39,11 @@ const NavBar = () => {
     <>
       <Container className="justify-content-center">
         <Navbar expand="lg">
-          <Image src="./images/tacbay.png" alt="logo" className="img-fluid" />
+          <Image
+            src="./images/tacbay.png"
+            alt="logo"
+            className="img-fluid logo"
+          />
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
@@ -91,7 +97,11 @@ const NavBar = () => {
               </Nav.Link>
             </Nav>
             <Nav.Link className="toogle-icon mb-2">
-              <BsBrightnessHigh />
+              <BsBrightnessHigh
+                onClick={() => {
+                  toogle_mode();
+                }}
+              />
             </Nav.Link>
             <Nav className="m-3">
               <Button variant="outline-success" className="">

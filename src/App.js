@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
@@ -7,6 +7,7 @@ import {
   Route,
   BrowserRouter,
 } from "react-router-dom";
+
 // import { Button, Container, Row, Image, Form } from "react-bootstrap";
 import Fpage from "./components/Fpage";
 import Signup from "./components/Signup";
@@ -28,6 +29,7 @@ import Changepass from "./components/Changepass";
 import Notify from "./components/Notify";
 import Personal from "./components/Personal";
 export default function App() {
+  const [theme, setTheme] = useState("light");
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
@@ -42,7 +44,10 @@ export default function App() {
         <Route path="/Resetpass" element={<ResetPass />} />
         <Route path="/VCode" element={<VCode />} />
         <Route path="/CreateAcc" element={<CreateAcc />} />
-        <Route path="/NavBar" element={<NavBar />} />
+        <Route
+          path="/NavBar"
+          element={<NavBar theme={theme} setTheme={setTheme} />}
+        />
         <Route path="/MainPage" element={<MainPage />} />
         <Route path="/Category" element={<Category />} />
         <Route path="/Settings" element={<Settings />} />
