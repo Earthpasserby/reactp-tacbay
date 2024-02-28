@@ -29,7 +29,7 @@ function ProfileID() {
   };
 
   return (
-    <Container className="kontainer">
+    <Container className="kontainer mt-5">
       <Image
         src="./images/tacbay.png"
         alt="logo"
@@ -37,8 +37,8 @@ function ProfileID() {
       />
 
       <Row className="Row mx-auto d-block mt-4">
-        <h5 className="text-center f-heading">Create Your Profile</h5>
-        <p className="text-center">Help us get to know you better. </p>
+        <h5 className="text-center f-heading fw-bold">Create Your Profile</h5>
+        <p className="text-center f-p2">Help us get to know you better. </p>
         <div>
           <Form.Group className="mb-3 d-flex justify-content-center">
             {image ? (
@@ -57,17 +57,17 @@ function ProfileID() {
                 }}
               >
                 <BsUpload
-                  size={50}
+                  size={20}
                   color="#495057"
                   class="position-absolute bottom-10 end-10"
                 />
               </div>
             )}
-            <Form.Control
+            {/* <Form.Control
               type="file"
               onChange={() => handleImageChange}
               className="d-block"
-            />
+            /> */}
           </Form.Group>
         </div>
         <div>
@@ -117,11 +117,17 @@ function ProfileID() {
             <option value="3">Homosapien</option>
           </select>
         </div>
-        <div className="d-grid mt-4">
-          <Button type="btn" className="text-center  btn-lg  border rounded-4 ">
-            Continue
-          </Button>
-        </div>
+        <Link to="/Passwordpage">
+          <div className="d-grid mt-4">
+            <Button
+              type="btn"
+              className="text-center  btn-lg  border rounded-3 fw-medium fs-6 "
+              style={{ height: "56px", background: "#0095BE" }}
+            >
+              Continue
+            </Button>
+          </div>
+        </Link>
       </Row>
     </Container>
   );

@@ -48,6 +48,7 @@ function Pagev() {
             <Button
               type="btn"
               className="text-center  btn-lg border rounded-4 "
+              style={{ height: "56px", background: "#0095BE" }}
             >
               Continue
             </Button>
@@ -55,7 +56,9 @@ function Pagev() {
         </Link>
         <p className="mt-1 my-2 text-center pagev-p fw-bold">
           You did not receive the code?
-          <span className="text-primary mx-1 fs-6 fw-semibold">Send again</span>
+          <span className=" mx-1 fs-6 fw-semibold" style={{ color: "#0095BE" }}>
+            Send again
+          </span>
         </p>
         <div className="d-grid ">
           <Button

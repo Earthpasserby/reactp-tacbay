@@ -41,15 +41,19 @@ function Signup() {
         <div className="mt-3 fw-medium">
           <p>
             <input type="checkbox" className="f-input" /> I agree to Tacbay's
-            <span className="text-primary"> Terms of Service,</span> and
+            <span style={{ color: "#0095BE" }}> Terms of Service,</span> and
             acknowledge the
-            <span className="text-primary"> Privacy Policy.</span>
+            <span style={{ color: "#0095BE" }}> Privacy Policy.</span>
           </p>
           <Link to="/Pagev">
             <div className="d-grid mt-4">
               <Button
                 type="btn"
                 className="text-center Button btn-lg border rounded-4 "
+                style={{
+                  height: "56px",
+                  background: "#0095BE",
+                }}
               >
                 Create Account
               </Button>
@@ -58,7 +62,7 @@ function Signup() {
 
           <p className="mt-2 my-4 f-p fw-semibold">
             Already have an account?{" "}
-            <span className="text-primary">Log in</span>
+            <span style={{ color: "#0095BE" }}>Log in</span>
           </p>
           <h6 className="f-line">OR</h6>
         </div>

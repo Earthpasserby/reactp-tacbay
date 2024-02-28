@@ -68,21 +68,21 @@ function Passwordpage() {
     height: "10px",
   });
   return (
-    <Container className="kontainer">
+    <Container className="kontainer mt-5">
       <Image
         src="./images/tacbay.png"
         alt="logo"
         className="mx-auto d-block img"
       />
       <Row className="Row mx-auto d-block mt-4">
-        <h5 className="text-center f-heading">Create Your Password</h5>
+        <h5 className="text-center f-heading fw-bold">Create Your Password</h5>
         <p className="text-center">
           To ensure the security of your account, please create a robust
           password.
         </p>
         <div className="form-group label-password">
           <div className="mt-2">
-            <label className="text-bold fw-bold">New password</label>
+            <label className="text-bold fw-semibold">New password</label>
             <input
               type={type}
               className="form-control input-password"
@@ -95,7 +95,7 @@ function Passwordpage() {
             </span>
           </div>
           <div className="mt-2">
-            <label className="text-bold fw-bold">Confirm password</label>
+            <label className="text-bold fw-semibold">Confirm password</label>
             <input
               type={type}
               className="form-control input-password"
@@ -166,7 +166,11 @@ function Passwordpage() {
           </Form>
         </div>
         <div className="d-grid mt-4">
-          <Button type="btn" className="text-center btn-lg border rounded-4 ">
+          <Button
+            type="btn"
+            className="text-center btn-lg border rounded-3 fs-6 fw-semibold"
+            style={{ height: "56px", background: "#0095BE" }}
+          >
             Create Account
           </Button>
         </div>

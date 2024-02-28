@@ -53,6 +53,7 @@ function Fpage() {
               <Button
                 type="btn"
                 className="text-center fw-bold fw-medium rounded-3"
+                style={{ height: "50px", background: "#0095BE" }}
               >
                 Next
               </Button>
