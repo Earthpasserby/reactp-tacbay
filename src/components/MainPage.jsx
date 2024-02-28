@@ -12,6 +12,7 @@ import {
 import Category from "./Category";
 import { IoLocationOutline } from "react-icons/io5";
 import NavBar from "./NavBar";
+import ButtonP from "./ButtonP";
 
 const MainPage = () => {
   const [selectedOption, setSelectedOption] = useState("");
@@ -95,6 +96,7 @@ const MainPage = () => {
           </div>
         </div>
       </Container>
+      <ButtonP />
       <Category />
     </>
   );

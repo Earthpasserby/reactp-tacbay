@@ -28,6 +28,7 @@ import Appearance from "./components/Appearance";
 import Changepass from "./components/Changepass";
 import Notify from "./components/Notify";
 import Personal from "./components/Personal";
+import FeatP from "./components/FeatP";
 export default function App() {
   const [theme, setTheme] = useState("light");
   return (
@@ -56,6 +57,7 @@ export default function App() {
         <Route path="/Changepass" element={<Changepass />} />
         <Route path="/Notify" element={<Notify />} />
         <Route path="/Personal" element={<Personal />} />
+        <Route path="/FeatP" element={<FeatP />} />
       </Routes>
     </BrowserRouter>
   );

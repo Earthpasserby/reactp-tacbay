@@ -7,13 +7,10 @@ import {
   Navbar,
   Nav,
   InputGroup,
-  Row,
-  Col,
   Form,
 } from "react-bootstrap";
 import { IoLocationOutline } from "react-icons/io5";
 import { BsBrightnessHigh } from "react-icons/bs";
-import { Link } from "react-router-dom";
 
 const NavBar = ({ theme, setTheme }) => {
   const toogle_mode = () => {
@@ -23,16 +20,6 @@ const NavBar = ({ theme, setTheme }) => {
 
   const handleChange = (event) => {
     setSelectedOption(event.target.value);
-  };
-
-  const containerRef = useRef(null);
-
-  const scrollToNext = () => {
-    containerRef.current.scrollLeft += containerRef.current.offsetWidth;
-  };
-
-  const scrollToPrevious = () => {
-    containerRef.current.scrollLeft -= containerRef.current.offsetWidth;
   };
 
   return (
@@ -113,32 +100,6 @@ const NavBar = ({ theme, setTheme }) => {
             </Nav>
           </Navbar.Collapse>
         </Navbar>
-      </Container>
-      <Container fluid>
-        <Row>
-          <Col>
-            <Button onClick={scrollToPrevious}>Previous</Button>
-          </Col>
-          <Col
-            xs={10}
-            ref={containerRef}
-            style={{ overflowX: "auto", whiteSpace: "nowrap" }}
-          >
-            <Link to="section1" spy={true} smooth={true} duration={500}>
-              Section 1
-            </Link>
-            <Link to="section2" spy={true} smooth={true} duration={500}>
-              Section 2
-            </Link>
-            <Link to="section3" spy={true} smooth={true} duration={500}>
-              Section 3
-            </Link>
-            {/* Add more ScrollSpy links as needed */}
-          </Col>
-          <Col>
-            <Button onClick={scrollToNext}>Next</Button>
-          </Col>
-        </Row>
       </Container>
     </>
   );

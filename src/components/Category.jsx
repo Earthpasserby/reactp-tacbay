@@ -12,7 +12,7 @@ import { TiSocialLinkedinCircular } from "react-icons/ti";
 const Category = () => {
   return (
     <>
-      <Container className="" style={{ marginTop: "150px" }}>
+      <Container className="" style={{ marginTop: "30px" }}>
         <h3>Featured</h3>
         <Row className="mt-4">
           <Col sm={4}>
