@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Container, Image, Row, Button, Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FiEye } from "react-icons/fi";
+import { IoEyeOffOutline } from "react-icons/io5";
 import zxcvbn from "zxcvbn";
 
 function Passwordpage() {
@@ -175,6 +176,11 @@ function Passwordpage() {
           </Button>
         </div>
       </Row>
+      <div className="box">
+        <div className="input-with-icon form-control">
+          <input type="text" className="custom-input" />
+        </div>
+      </div>
     </Container>
   );
 }

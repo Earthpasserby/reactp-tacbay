@@ -700,7 +700,22 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 /* ButtonP */
-
 .Bp-button {
   background: #637083;
+}
+/* New input authentication */
+.box {
+  width: 500px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+.input-with-icon {
+  display: flex;
+}
+
+.custom-input {
+  width: 95%;
+  border: none;
+  outline: none;
 }
