@@ -704,7 +704,7 @@ input:checked + .slider:before {
   background: #637083;
 }
 /* New input authentication */
-.box {
+/* .box {
   width: 500px;
   padding: 30px;
   background-color: #fff;
@@ -712,10 +712,14 @@ input:checked + .slider:before {
 }
 .input-with-icon {
   display: flex;
-}
+} */
 
 .custom-input {
-  width: 95%;
-  border: none;
-  outline: none;
+  position: absolute;
+  bottom: 85px;
+  height: 16px;
+  right: 0;
+  padding: 4px 29px;
+  font-size: 0.9rem;
+  font-weight: 700;
 }

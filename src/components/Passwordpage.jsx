@@ -6,7 +6,8 @@ import { IoEyeOffOutline } from "react-icons/io5";
 import zxcvbn from "zxcvbn";
 
 function Passwordpage() {
-  const [type, setType] = useState("input");
+  const [type, setType] = useState("password");
+  // const [type, setType] = useState("input");
   const hideShow = (e) => {
     e.preventDefault();
     e.stopPropagation();
@@ -104,9 +105,15 @@ function Passwordpage() {
               maxLength={12}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <span className="secondShow-password" onClick={showHide}>
-              {type === "input" ? <FiEye /> : <FiEye />}
-            </span>
+            {type === "password" ? (
+              <span className="custom-input" onClick={() => setType("text")}>
+                <FiEye />
+              </span>
+            ) : (
+              <span className="icon-span" onClick={() => setType("password")}>
+                <IoEyeOffOutline />
+              </span>
+            )}
           </div>
           <div className="mt-3 d-flex justify-content-between">
             <p>Password Strength</p>
@@ -176,11 +183,20 @@ function Passwordpage() {
           </Button>
         </div>
       </Row>
-      <div className="box">
+      {/* <div className="box">
         <div className="input-with-icon form-control">
-          <input type="text" className="custom-input" />
+          <input type={type} className="custom-input" />
+          {type === "password" ? (
+            <span className="icon-span" onClick={() => setType("text")}>
+              <FiEye size={18} />
+            </span>
+          ) : (
+            <span className="icon-span" onClick={() => setType("password")}>
+              <IoEyeOffOutline size={18} />
+            </span>
+          )}
         </div>
-      </div>
+      </div> */}
     </Container>
   );
 }
