@@ -3,10 +3,49 @@ import { Container, Image, Row, Button, Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FiEye } from "react-icons/fi";
 import { IoEyeOffOutline } from "react-icons/io5";
+import { FaRegCircle } from "react-icons/fa";
+import { FaCircleCheck } from "react-icons/fa6";
 import zxcvbn from "zxcvbn";
 
 function Passwordpage() {
   const [type, setType] = useState("password");
+  const [lengthValidated, setLengthValidated] = useState(false);
+  const [upperValidated, setUpperValidated] = useState(false);
+  const [numberValidated, setNumberValidated] = useState(false);
+  const [specialValidated, setSpecialValidated] = useState(false);
+
+  const handlechange = (value) => {
+    //regex
+    const length = new RegExp("(?=.*[12,])");
+    const upper = new RegExp("(?=.*[A-Z])");
+    const number = new RegExp("(?=.*[0-9])");
+    const special = new RegExp("(?=.*[!@#$%^&*])");
+
+    //lenthcase
+    if (length.test(value)) {
+      setLengthValidated(true);
+    } else {
+      setLengthValidated(false);
+    }
+    //uppercase
+    if (upper.test(value)) {
+      setUpperValidated(true);
+    } else {
+      setUpperValidated(false);
+    }
+    //number
+    if (number.test(value)) {
+      setNumberValidated(true);
+    } else {
+      setNumberValidated(false);
+    }
+    //special
+    if (special.test(value)) {
+      setSpecialValidated(true);
+    } else {
+      setSpecialValidated(false);
+    }
+  };
   // const [type, setType] = useState("input");
   const hideShow = (e) => {
     e.preventDefault();
@@ -59,7 +98,8 @@ function Passwordpage() {
         return "none";
     }
   };
-
+  <FaRegCircle />;
+  <FaCircleCheck />;
   const [password, setPassword] = useState("");
   const testResult = zxcvbn(password);
   const num = (testResult.score * 100) / 4;
@@ -89,12 +129,24 @@ function Passwordpage() {
               type={type}
               className="form-control input-password"
               placeholder="password"
-              maxLength={12}
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={(e) => handlechange(e.target.value)}
+              // onChange={(e) => setPassword(e.target.value)}
             />
-            <span className="show-password" onClick={hideShow}>
-              {type === "input" ? <FiEye /> : <FiEye />}
-            </span>
+            {type === "password" ? (
+              <span
+                className="show-password"
+                onClick={(showHide) => setType("text")}
+              >
+                <FiEye />
+              </span>
+            ) : (
+              <span
+                className="show-password"
+                onClick={(hideShow) => setType("password")}
+              >
+                <IoEyeOffOutline />
+              </span>
+            )}
           </div>
           <div className="mt-2">
             <label className="text-bold fw-semibold">Confirm password</label>
@@ -102,15 +154,20 @@ function Passwordpage() {
               type={type}
               className="form-control input-password"
               placeholder="password"
-              maxLength={12}
               onChange={(e) => setPassword(e.target.value)}
             />
             {type === "password" ? (
-              <span className="custom-input" onClick={() => setType("text")}>
+              <span
+                className="secondShow-password"
+                onClick={() => setType("text")}
+              >
                 <FiEye />
               </span>
             ) : (
-              <span className="icon-span" onClick={() => setType("password")}>
+              <span
+                className="secondShow-password"
+                onClick={() => setType("password")}
+              >
                 <IoEyeOffOutline />
               </span>
             )}
@@ -183,6 +240,20 @@ function Passwordpage() {
           </Button>
         </div>
       </Row>
+      <main className="tracker-box">
+        <div className={lengthValidated ? "validated" : "not validated"}>
+          Minimum 12 characters
+        </div>
+        <div className={upperValidated ? "validated" : "not validated"}>
+          Use a mix of uppercase and lowercase letters
+        </div>
+        <div className={numberValidated ? "validated" : "not validated"}>
+          Include at least one number
+        </div>
+        <div className={specialValidated ? "validated" : "not validated"}>
+          Add at least one special character (!@#$%)
+        </div>
+      </main>
       {/* <div className="box">
         <div className="input-with-icon form-control">
           <input type={type} className="custom-input" />

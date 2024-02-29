@@ -704,16 +704,6 @@ input:checked + .slider:before {
   background: #637083;
 }
 /* New input authentication */
-/* .box {
-  width: 500px;
-  padding: 30px;
-  background-color: #fff;
-  border-radius: 5px;
-}
-.input-with-icon {
-  display: flex;
-} */
-
 .custom-input {
   position: absolute;
   bottom: 85px;
@@ -722,4 +712,23 @@ input:checked + .slider:before {
   padding: 4px 29px;
   font-size: 0.9rem;
   font-weight: 700;
+}
+.icon-span {
+  cursor: pointer;
+}
+.tracker-box {
+  background: #386489;
+  font-size: 14px;
+  color: #ffffff;
+  letter-spacing: 0.09em;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+.tracker-box div {
+  margin: 5px 0;
+}
+.tracker-box,
+.validated {
+  color: rgba(255, 255, 255, 0.5);
 }
