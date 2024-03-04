@@ -47,18 +47,18 @@ function Passwordpage() {
     }
   };
   // const [type, setType] = useState("input");
-  const hideShow = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    let currentType = type === "input" ? "password" : "input";
-    setType(currentType);
-  };
-  const showHide = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    let currentType = type === "input" ? "password" : "input";
-    setType(currentType);
-  };
+  // const hideShow = (e) => {
+  //   e.preventDefault();
+  //   e.stopPropagation();
+  //   let currentType = type === "input" ? "password" : "input";
+  //   setType(currentType);
+  // };
+  // const showHide = (e) => {
+  //   e.preventDefault();
+  //   e.stopPropagation();
+  //   let currentType = type === "input" ? "password" : "input";
+  //   setType(currentType);
+  // };
 
   /* new color*/
   const funcProgressColor = () => {
@@ -98,8 +98,7 @@ function Passwordpage() {
         return "none";
     }
   };
-  <FaRegCircle />;
-  <FaCircleCheck />;
+
   const [password, setPassword] = useState("");
   const testResult = zxcvbn(password);
   const num = (testResult.score * 100) / 4;
@@ -241,16 +240,25 @@ function Passwordpage() {
         </div>
       </Row>
       <main className="tracker-box">
-        <div className={lengthValidated ? "validated" : "not validated"}>
+        <div className={lengthValidated ? "validated" : "not-validated"}>
+          {lengthValidated ? (
+            <span className="list-icon green">
+              <FaCircleCheck />
+            </span>
+          ) : (
+            <span className="list-icon green">
+              <FaCircleCheck />
+            </span>
+          )}
           Minimum 12 characters
         </div>
-        <div className={upperValidated ? "validated" : "not validated"}>
+        <div className={upperValidated ? "validated" : "not-validated"}>
           Use a mix of uppercase and lowercase letters
         </div>
-        <div className={numberValidated ? "validated" : "not validated"}>
+        <div className={numberValidated ? "validated" : "not-validated"}>
           Include at least one number
         </div>
-        <div className={specialValidated ? "validated" : "not validated"}>
+        <div className={specialValidated ? "validated" : "not-validated"}>
           Add at least one special character (!@#$%)
         </div>
       </main>
