@@ -43,7 +43,7 @@ function Pagev() {
             );
           })}
         </div>
-        <Link to="/ProfileID">
+        <Link to="/ProfileID" style={{ textDecoration: "none" }}>
           <div className="d-grid mt-4">
             <Button
               type="btn"

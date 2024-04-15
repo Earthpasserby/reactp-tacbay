@@ -34,7 +34,7 @@ const ResetPass = () => {
               countryCodeEditable={false}
             />
           </div>
-          <Link to="/VCode">
+          <Link to="/VCode" style={{ textDecoration: "none" }}>
             <div className="d-grid mt-4">
               <Button
                 type="btn"

@@ -103,7 +103,7 @@ const CreateAcc = () => {
                   Forgot password?
                 </p>
               </div>
-              <Link to="/Resetpass">
+              <Link to="/Resetpass" style={{ textDecoration: "none" }}>
                 <div className="d-grid ">
                   <Button
                     type="btn"

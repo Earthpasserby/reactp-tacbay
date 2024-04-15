@@ -116,7 +116,7 @@ const NavbarPage = () => {
             </div>
           </div>
 
-          <Link to="/MainPage">
+          <Link to="/MainPage" style={{ textDecoration: "none" }}>
             <div className="d-grid mt-4">
               <Button
                 type="btn"

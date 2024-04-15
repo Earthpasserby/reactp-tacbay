@@ -110,19 +110,22 @@ function ProfileID() {
           <label htmlFor="text" className="Profile-label4">
             Gender
           </label>
-          <select class="form-select" aria-label="Default select example">
+          <select class="form-select" aria-label="Default select example" >
             <option selected>Specify gender</option>
             <option value="1">Male</option>
             <option value="2">Female</option>
             <option value="3">Homosapien</option>
           </select>
         </div>
-        <Link to="/Passwordpage">
+        <Link to="/Passwordpage" style={{ textDecoration: "none" }}>
           <div className="d-grid mt-4">
             <Button
               type="btn"
-              className="text-center  btn-lg  border rounded-3 fw-medium fs-6 "
-              style={{ height: "56px", background: "#0095BE" }}
+              className="text-center  btn-lg  border rounded-3 fw-medium fs-6"
+              style={{
+                height: "56px",
+                background: "#0095BE",
+              }}
             >
               Continue
             </Button>

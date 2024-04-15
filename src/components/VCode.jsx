@@ -40,7 +40,7 @@ const VCode = () => {
               );
             })}
           </div>
-          <Link to="/NavbarPage">
+          <Link to="/NavbarPage" style={{ textDecoration: "none" }}>
             <div className="d-grid mt-4">
               <Button
                 type="btn"

@@ -45,7 +45,7 @@ function Signup() {
             acknowledge the
             <span style={{ color: "#0095BE" }}> Privacy Policy.</span>
           </p>
-          <Link to="/Pagev">
+          <Link to="/Pagev" style={{ textDecoration: "none" }}>
             <div className="d-grid mt-4">
               <Button
                 type="btn"

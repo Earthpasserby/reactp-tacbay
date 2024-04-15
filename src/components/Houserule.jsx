@@ -76,11 +76,15 @@ const Houserule = () => {
               Report any violation of policy by using "Need Help Button"
             </p>
           </div>
-          <Link to="/CreateAcc">
+          <Link to="/CreateAcc" style={{ textDecoration: "none" }}>
             <div className="d-grid mt-4">
               <Button
                 type="btn"
                 className="text-center btn-lg border rounded-4 "
+                style={{
+                  height: "56px",
+                  background: "#0095BE",
+                }}
               >
                 Continue
               </Button>
