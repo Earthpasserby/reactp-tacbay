@@ -276,6 +276,38 @@ function Passwordpage() {
           )}
         </div>
       </div> */}
+
+      <div className="wrapper tracker-box">
+        <div className="pass-field">
+          <input
+            type="password"
+            placeholder="Create password"
+            style={{ width: 200, height: 20 }}
+          />
+          <FiEye />
+        </div>
+        <div className="content">
+          <p>Password must contain</p>
+          <ul className="requirement-list">
+            <li>
+              <FaCircleCheck />
+              <span> Minimum 12 characters </span>
+            </li>
+            <li>
+              <FaCircleCheck />
+              <span> Use a mix of uppercase and lowercase letters </span>
+            </li>
+            <li>
+              <FaCircleCheck />
+              <span> Include at least one number </span>
+            </li>
+            <li>
+              <FaCircleCheck />
+              <span> Add at least one special character (!@#$%) </span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </Container>
   );
 }

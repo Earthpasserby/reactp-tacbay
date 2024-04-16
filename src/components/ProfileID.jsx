@@ -33,7 +33,7 @@ function ProfileID() {
       <Image
         src="./images/tacbay.png"
         alt="logo"
-        className="mx-auto d-block img"
+        className="mx-auto d-block mx-5 img "
       />
 
       <Row className="Row mx-auto d-block mt-4">
