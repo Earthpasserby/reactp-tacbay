@@ -738,3 +738,8 @@ input:checked + .slider:before {
 .list-icon.green {
   color: #0f0;
 }
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
