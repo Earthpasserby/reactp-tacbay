@@ -48,7 +48,7 @@ function Fpage() {
             Pidgin
             <input type="radio" value={"english"} />
           </label>
-          <Link to="/Signup">
+          <Link to="/Signup" style={{ textDecoration: "none" }}>
             <div className="d-grid mt-5 p-1">
               <Button
                 type="btn"
