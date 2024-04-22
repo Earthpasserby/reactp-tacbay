@@ -282,10 +282,10 @@ function Passwordpage() {
           <input
             type="password"
             placeholder="Create password"
-            className="form-control"
-            // style={{ width: 200, height: 20 }}
+            // className="form-control"
+            // style={{ width: "25%", height: "50%" }}
           />
-          {/* <FiEye /> */}
+          <FiEye className="FiEye" />
         </div>
         <div className="content">
           <p>Password must contain</p>

@@ -738,8 +738,56 @@ input:checked + .slider:before {
 .list-icon.green {
   color: #0f0;
 }
-.wrapper {
+
+.body{
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #0095be;
+}
+.wrapper {
+  background: #fff;
+  width: 450px;
+  padding: 28px;
+  border-radius: 7px;
+}
+.wrapper .pass-field {
+  height: 65px;
+  width: 100%;
+  position: relative;
+}
+
+.pass-field input {
+  width: 100%;
+  height: 100%;
+  padding: 0 17px;
+  outline: none;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  border: 1px solid #0f0;
+}
+.pass-field .FiEye {
+  right: 18px;
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+}
+.wrapper .content{
+  margin: 20px 0 10px;
+}
+.content p{
+  font-size: 1.3rem;
+}
+
+.content .requirement-list{
+  margin-top: 20px;
+}
+
+.requirement-list li{
+  list-style: none;
+  font-size: 1.07rem;
+  display: flex;
+  align-items:center ;
+  margin-bottom: 15px;
 }
