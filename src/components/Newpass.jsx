@@ -6,10 +6,12 @@ import { FiEye } from "react-icons/fi";
 
 const passwordInput = document.querySelector(".pass-field  input");
 const eyeIcon = document.querySelector(".pass-field  FiEye");
-eyeIcon.addEventListener("click", () => {
-          passwordInput.type = passwordInput.type === "password" ? "text" : "password";
-     });
-
+if (eyeIcon) {
+  eyeIcon.addEventListener("click", () => {
+    passwordInput.type =
+      passwordInput.type === "password" ? "text" : "password";
+  });
+}
 const Newpass = () => {
   return (
     <Container className="body">
