@@ -6,12 +6,15 @@
   box-sizing: border-box;
 }
 /* fpage page/*/
+
 .kontainer {
-  max-width: 80%;
-  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 .Row {
-  width: 30%;
+  width: 31%;
 }
 input {
   width: 20px;
@@ -266,7 +269,10 @@ label {
   font-weight: 500;
   line-height: 32px;
   letter-spacing: 0em;
-  text-align: center;
+  color: #141c24;
+  height: 32px;
+  gap: 0px;
+  opacity: 0px;
 }
 .p-h {
   color: #141c24;
@@ -274,6 +280,14 @@ label {
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
+}
+.h-p {
+  color: #344051;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  width: 452rem;
 }
 .cont {
   display: flex;

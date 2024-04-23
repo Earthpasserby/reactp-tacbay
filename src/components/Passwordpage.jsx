@@ -5,6 +5,7 @@ import { FiEye } from "react-icons/fi";
 import { IoEyeOffOutline } from "react-icons/io5";
 import PWDRequisite from "./PWDRequisite";
 import zxcvbn from "zxcvbn";
+import { Link } from "react-router-dom";
 
 function Passwordpage() {
   const [type, setType] = useState("password");
@@ -92,13 +93,9 @@ function Passwordpage() {
     height: "10px",
   });
   return (
-    <Container className="kontainer mt-5">
-      <Image
-        src="./images/tacbay.png"
-        alt="logo"
-        className="mx-auto d-block img"
-      />
-      <Row className="Row mx-auto d-block mt-4">
+    <Container className="d-flex flex-column align-items-center kontainer">
+      <Image src="./images/tacbay.png" alt="logo" className="img-fluid" />
+      <Row className="Row ">
         <h5 className="text-center f-heading fw-bold">Create Your Password</h5>
         <p className="text-center">
           To ensure the security of your account, please create a robust
@@ -180,15 +177,20 @@ function Passwordpage() {
             specialCharFlag={checks.specialCharCheck ? "valid" : "invalid"}
           />
         ) : null}
-        <div className="d-grid mt-4">
-          <Button
-            type="btn"
-            className="text-center btn-lg border rounded-3 fs-6 fw-semibold"
-            style={{ height: "56px", background: "#0095BE" }}
-          >
-            Create Account
-          </Button>
-        </div>
+        <Link to="/Houserule" style={{ textDecoration: "none" }}>
+          <div className="d-grid mt-4">
+            <Button
+              type="btn"
+              className="text-center btn-lg border rounded-4 "
+              style={{
+                height: "56px",
+                background: "#0095BE",
+              }}
+            >
+              Continue
+            </Button>
+          </div>
+        </Link>
       </Row>
     </Container>
   );
