@@ -1,12 +1,10 @@
 import React, { useState } from "react";
-import { Container, Image, Row, Button, Form } from "react-bootstrap";
+import { Container, Image, Row, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FiEye } from "react-icons/fi";
 import { IoEyeOffOutline } from "react-icons/io5";
-import { FaRegCircle } from "react-icons/fa";
-import { FaCircleCheck } from "react-icons/fa6";
-import zxcvbn from "zxcvbn";
 import PWDRequisite from "./PWDRequisite";
+import zxcvbn from "zxcvbn";
 
 function Passwordpage() {
   const [type, setType] = useState("password");
@@ -17,8 +15,10 @@ function Passwordpage() {
     pwdLengthCheck: false,
     specialCharCheck: false,
   });
+
+  /* validtion*/
   const handleOnChange = (e) => {
-    setType(e.target.value);
+    setPassword(e.target.value);
   };
 
   const handleOnFocus = () => {
@@ -41,19 +41,6 @@ function Passwordpage() {
       pwdLengthCheck,
       specialCharCheck,
     });
-  };
-
-  const hideShow = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    let currentType = type === "password" ? "text" : "password";
-    setType(currentType);
-  };
-  const showHide = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    let currentType = type === "password" ? "text" : "password";
-    setType(currentType);
   };
 
   /* new color*/
@@ -95,8 +82,8 @@ function Passwordpage() {
     }
   };
 
-  // const [password, setPassword] = useState("");
-  const testResult = zxcvbn(type);
+  const [password, setPassword] = useState("");
+  const testResult = zxcvbn(password);
   const num = (testResult.score * 100) / 4;
 
   const changePasswordColor = () => ({
@@ -117,35 +104,31 @@ function Passwordpage() {
           To ensure the security of your account, please create a robust
           password.
         </p>
-
         <div className="form-group label-password">
           <div className="mt-2">
             <label className="text-bold fw-semibold">New password</label>
             <input
-              type="password"
-              id="passwrord"
-              value={type}
+              type={type}
+              className="form-control input-password"
+              placeholder="password"
               maxLength={12}
               onChange={handleOnChange}
               onFocus={handleOnFocus}
               onBlur={handleOnBlur}
               onKeyUp={handleOnKeyUp}
-              className="form-control input-password"
-              placeholder="password"
               // onChange={(e) => setPassword(e.target.value)}
             />
-
             {type === "password" ? (
               <span
                 className="show-password"
-                onClick={(showHide) => setType("password")}
+                onClick={(showHide) => setType("text")}
               >
                 <FiEye />
               </span>
             ) : (
               <span
                 className="show-password"
-                onClick={(hideShow) => setType("text")}
+                onClick={(hideShow) => setType("password")}
               >
                 <IoEyeOffOutline />
               </span>
@@ -154,29 +137,26 @@ function Passwordpage() {
           <div className="mt-2">
             <label className="text-bold fw-semibold">Confirm password</label>
             <input
-              type="password"
-              id="passwrord"
-              value={type}
+              type={type}
+              className="form-control input-password"
+              placeholder="password"
               maxLength={12}
               onChange={handleOnChange}
               onFocus={handleOnFocus}
               onBlur={handleOnBlur}
               onKeyUp={handleOnKeyUp}
-              className="form-control input-password"
-              placeholder="password"
-              // onChange={(e) => setType(e.target.value)}
             />
             {type === "password" ? (
               <span
                 className="secondShow-password"
-                onClick={() => setType("password")}
+                onClick={() => setType("text")}
               >
                 <FiEye />
               </span>
             ) : (
               <span
                 className="secondShow-password"
-                onClick={() => setType("text")}
+                onClick={() => setType("password")}
               >
                 <IoEyeOffOutline />
               </span>
@@ -191,15 +171,15 @@ function Passwordpage() {
           <div className="progress" style={{ height: "10px" }}>
             <div className="progress-bar" style={changePasswordColor()}></div>
           </div>
-          {pwdRequiste ? (
-            <PWDRequisite
-              capsLetterFlag={checks.capsLetterCheck ? "valid" : "invalid"}
-              numberFlag={checks.numberCheck ? "valid" : "invalid"}
-              pwdLengthFlag={checks.pwdLengthCheck ? "valid" : "invalid"}
-              specialCharFlag={checks.specialCharCheck ? "valid" : "invalid"}
-            />
-          ) : null}
         </div>
+        {pwdRequiste ? (
+          <PWDRequisite
+            capsLetterFlag={checks.capsLetterCheck ? "valid" : "invalid"}
+            numberFlag={checks.numberCheck ? "valid" : "invalid"}
+            pwdLengthFlag={checks.pwdLengthCheck ? "valid" : "invalid"}
+            specialCharFlag={checks.specialCharCheck ? "valid" : "invalid"}
+          />
+        ) : null}
         <div className="d-grid mt-4">
           <Button
             type="btn"
