@@ -22,7 +22,7 @@ function Pagev() {
     <Container className=" d-flex flex-column align-items-center kontainer">
       <Image src="./images/tacbay.png" alt="logo" className="img-fluid" />
       <Row className="Row">
-        <h5 className="text-center f-heading fw-bold">Verify Your Number</h5>
+        <h5 className=" f-heading fw-bold">Verify Your Number</h5>
         <p className="pagev-p">
           We've sent a verification code to your phone number. Please enter the
           code to continue.
@@ -40,7 +40,7 @@ function Pagev() {
           })}
         </div>
         <Link to="/ProfileID" style={{ textDecoration: "none" }}>
-          <div className="d-grid mt-4">
+          <div className="d-grid mt-2">
             <Button
               type="btn"
               className="text-center  btn-lg border rounded-4 "
@@ -50,7 +50,7 @@ function Pagev() {
             </Button>
           </div>
         </Link>
-        <p className="mt-1 my-2 text-center pagev-p fw-bold">
+        <p className="my-2 text-center pagev-p fw-bold">
           You did not receive the code?
           <span className=" mx-1 fs-6 fw-semibold" style={{ color: "#0095BE" }}>
             Send again

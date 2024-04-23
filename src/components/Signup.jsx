@@ -24,9 +24,9 @@ function Signup() {
           <label htmlFor="number">Phone Number</label>
           <PhoneInput
             className="mt-0"
-            inputClass="w-100 border rounded-3 m-4 p-4"
+            inputClass="border rounded-3"
+            inputStyle={{ fontSize: "16px", width: "350px" }}
             country={country}
-            placeholder="Enter Phone Number"
             onChange={(value) => {
               setNumber(value);
               setCountry();
@@ -34,7 +34,7 @@ function Signup() {
             countryCodeEditable={false}
           />
         </div>
-        <div className="mt-3 fw-medium">
+        <div className="mt-2 fw-medium">
           <p>
             <input type="checkbox" className="f-input" /> I agree to Tacbay's
             <span style={{ color: "#0095BE" }}> Terms of Service,</span> and
@@ -45,7 +45,7 @@ function Signup() {
             <div className="d-grid mt-4">
               <Button
                 type="btn"
-                className="text-center Button btn-lg border rounded-4 "
+                className="text-center btn-lg border rounded-4 "
                 style={{
                   height: "56px",
                   background: "#0095BE",
@@ -56,14 +56,14 @@ function Signup() {
             </div>
           </Link>
 
-          <p className="mt-2 my-4 f-p fw-semibold">
+          <p className="mt-2 my-3 f-p fw-semibold">
             Already have an account?{" "}
             <span style={{ color: "#0095BE" }}>Log in</span>
           </p>
           <h6 className="f-line">OR</h6>
         </div>
 
-        <div className="d-grid mt-4">
+        <div className="d-grid">
           <Button
             type="btn"
             variant="Secondary"
