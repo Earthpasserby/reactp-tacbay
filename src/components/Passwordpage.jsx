@@ -93,106 +93,110 @@ function Passwordpage() {
     height: "10px",
   });
   return (
-    <Container className="d-flex flex-column align-items-center kontainer">
-      <Image src="./images/tacbay.png" alt="logo" className="img-fluid" />
-      <Row className="Row ">
-        <h5 className="text-center f-heading fw-bold">Create Your Password</h5>
-        <p className="text-center">
-          To ensure the security of your account, please create a robust
-          password.
-        </p>
-        <div className="form-group label-password">
-          <div className="mt-2">
-            <label className="text-bold fw-semibold">New password</label>
-            <input
-              type={type}
-              className="form-control input-password"
-              placeholder="password"
-              maxLength={12}
-              onChange={handleOnChange}
-              onFocus={handleOnFocus}
-              onBlur={handleOnBlur}
-              onKeyUp={handleOnKeyUp}
-              // onChange={(e) => setPassword(e.target.value)}
+    <>
+      <Container className="d-flex flex-column align-items-center kontainer">
+        <Image src="./images/tacbay.png" alt="logo" className="img-fluid" />
+        <Row className="Row ">
+          <h5 className="text-center f-heading fw-bold">
+            Create Your Password
+          </h5>
+          <p className="text-center">
+            To ensure the security of your account, please create a robust
+            password.
+          </p>
+          <div className="form-group label-password">
+            <div className="mt-2">
+              <label className="text-bold fw-semibold">New password</label>
+              <input
+                type={type}
+                className="form-control input-password"
+                placeholder="password"
+                maxLength={12}
+                onChange={handleOnChange}
+                onFocus={handleOnFocus}
+                onBlur={handleOnBlur}
+                onKeyUp={handleOnKeyUp}
+                // onChange={(e) => setPassword(e.target.value)}
+              />
+              {type === "password" ? (
+                <span
+                  className="show-password"
+                  onClick={(showHide) => setType("text")}
+                >
+                  <FiEye />
+                </span>
+              ) : (
+                <span
+                  className="show-password"
+                  onClick={(hideShow) => setType("password")}
+                >
+                  <IoEyeOffOutline />
+                </span>
+              )}
+            </div>
+            <div className="mt-2">
+              <label className="text-bold fw-semibold">Confirm password</label>
+              <input
+                type={type}
+                className="form-control input-password"
+                placeholder="password"
+                maxLength={12}
+                onChange={handleOnChange}
+                onFocus={handleOnFocus}
+                onBlur={handleOnBlur}
+                onKeyUp={handleOnKeyUp}
+              />
+              {type === "password" ? (
+                <span
+                  className="secondShow-password"
+                  onClick={() => setType("text")}
+                >
+                  <FiEye />
+                </span>
+              ) : (
+                <span
+                  className="secondShow-password"
+                  onClick={() => setType("password")}
+                >
+                  <IoEyeOffOutline />
+                </span>
+              )}
+            </div>
+            <div className="mt-3 d-flex justify-content-between">
+              <p>Password Strength</p>
+              <p style={{ color: funcProgressColor(), fontWeight: "bold" }}>
+                {createPassLabel()}
+              </p>
+            </div>
+            <div className="progress" style={{ height: "10px" }}>
+              <div className="progress-bar" style={changePasswordColor()}></div>
+            </div>
+          </div>
+          {pwdRequiste ? (
+            <PWDRequisite
+              capsLetterFlag={checks.capsLetterCheck ? "valid" : "invalid"}
+              numberFlag={checks.numberCheck ? "valid" : "invalid"}
+              pwdLengthFlag={checks.pwdLengthCheck ? "valid" : "invalid"}
+              specialCharFlag={checks.specialCharCheck ? "valid" : "invalid"}
             />
-            {type === "password" ? (
-              <span
-                className="show-password"
-                onClick={(showHide) => setType("text")}
+          ) : null}
+          <Link to="/Houserule" style={{ textDecoration: "none" }}>
+            <div className="d-grid mt-4">
+              <Button
+                type="btn"
+                className="text-center btn-lg border rounded-4 "
+                style={{
+                  height: "56px",
+                  background: "#0095BE",
+                }}
               >
-                <FiEye />
-              </span>
-            ) : (
-              <span
-                className="show-password"
-                onClick={(hideShow) => setType("password")}
-              >
-                <IoEyeOffOutline />
-              </span>
-            )}
-          </div>
-          <div className="mt-2">
-            <label className="text-bold fw-semibold">Confirm password</label>
-            <input
-              type={type}
-              className="form-control input-password"
-              placeholder="password"
-              maxLength={12}
-              onChange={handleOnChange}
-              onFocus={handleOnFocus}
-              onBlur={handleOnBlur}
-              onKeyUp={handleOnKeyUp}
-            />
-            {type === "password" ? (
-              <span
-                className="secondShow-password"
-                onClick={() => setType("text")}
-              >
-                <FiEye />
-              </span>
-            ) : (
-              <span
-                className="secondShow-password"
-                onClick={() => setType("password")}
-              >
-                <IoEyeOffOutline />
-              </span>
-            )}
-          </div>
-          <div className="mt-3 d-flex justify-content-between">
-            <p>Password Strength</p>
-            <p style={{ color: funcProgressColor(), fontWeight: "bold" }}>
-              {createPassLabel()}
-            </p>
-          </div>
-          <div className="progress" style={{ height: "10px" }}>
-            <div className="progress-bar" style={changePasswordColor()}></div>
-          </div>
-        </div>
-        {pwdRequiste ? (
-          <PWDRequisite
-            capsLetterFlag={checks.capsLetterCheck ? "valid" : "invalid"}
-            numberFlag={checks.numberCheck ? "valid" : "invalid"}
-            pwdLengthFlag={checks.pwdLengthCheck ? "valid" : "invalid"}
-            specialCharFlag={checks.specialCharCheck ? "valid" : "invalid"}
-          />
-        ) : null}
-        <Link to="/Houserule" style={{ textDecoration: "none" }}>
-          <div className="d-grid mt-4">
-            <Button
-              type="btn"
-              className="text-center btn-lg border rounded-4 "
-              style={{
-                height: "56px",
-                background: "#0095BE",
-              }}
-            >
-              Continue
-            </Button>
-          </div>
-        </Link>
-      </Row>
-    </Container>
+                Continue
+              </Button>
+            </div>
+          </Link>
+        </Row>
+      </Container>
+    </>
   );
 }
 export default Passwordpage;

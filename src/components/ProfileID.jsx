@@ -29,14 +29,10 @@ function ProfileID() {
   };
 
   return (
-    <Container className="kontainer mt-5">
-      <Image
-        src="./images/tacbay.png"
-        alt="logo"
-        className="mx-auto d-block mx-5 img "
-      />
+    <Container className="d-flex flex-column align-items-center kontainer">
+      <Image src="./images/tacbay.png" alt="logo" className="img-fluid " />
 
-      <Row className="Row mx-auto d-block mt-4">
+      <Row className="Row mt-4">
         <h5 className="text-center f-heading fw-bold">Create Your Profile</h5>
         <p className="text-center f-p2">Help us get to know you better. </p>
         <div>
@@ -110,7 +106,7 @@ function ProfileID() {
           <label htmlFor="text" className="Profile-label4">
             Gender
           </label>
-          <select class="form-select" aria-label="Default select example" >
+          <select class="form-select" aria-label="Default select example">
             <option selected>Specify gender</option>
             <option value="1">Male</option>
             <option value="2">Female</option>

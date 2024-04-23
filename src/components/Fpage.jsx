@@ -6,11 +6,11 @@ import { Link } from "react-router-dom";
 function Fpage() {
   return (
     <Container className="kontainer mt-5 p-4">
-      <Image
+      {/* <Image
         src="./images/tacbay.png"
         alt="logo"
         className="mx-auto d-block img"
-      />
+      /> */}
       <Row className="Row mx-auto d-block mt-4">
         <h5 className="text-center f-heading fw-bold">Choose Your Language</h5>
         <Form className="mt-4">

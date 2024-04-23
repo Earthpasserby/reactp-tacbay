@@ -15,13 +15,9 @@ function Signup() {
     console.log(Number);
   }, [Number]);
   return (
-    <Container className="kontainer mt-5">
-      <Image
-        src="./images/tacbay.png"
-        alt="logo"
-        className="mx-auto d-block img"
-      />
-      <Row className="Row  mx-auto d-block mt-5">
+    <Container className="d-flex flex-column align-items-center kontainer">
+      <Image src="./images/tacbay.png" alt="logo" className="img-fluid" />
+      <Row className="Row ">
         <h5 className="text-center f-heading fw-bold">Create Account</h5>
         <p className="f-p2">Get started by entering your mobile phone number</p>
         <div>
@@ -71,17 +67,17 @@ function Signup() {
           <Button
             type="btn"
             variant="Secondary"
-            className="text-center btn-lg  border rounded-4 Button"
+            className="text-center btn-lg  border rounded-4"
           >
             <FcGoogle />
-            <span className="mx-3 button-text">Continue with Google</span>
+            <span className="mx-2 button-text">Continue with Google</span>
           </Button>
         </div>
         <div className="d-grid mt-4">
           <Button
             type="btn"
             variant="Secondary"
-            className="text-center btn-lg border rounded-4 Button"
+            className="text-center btn-lg border rounded-4"
           >
             <FaFacebook />
             <span className="mx-3 button-text">Continue with Facebook</span>
@@ -91,7 +87,7 @@ function Signup() {
           <Button
             type="btn"
             variant="Secondary"
-            className="text-center btn-lg  border rounded-4 Button"
+            className="text-center btn-lg  border rounded-4"
           >
             <FaApple />
             <span className="mx-3 button-text">Continue with Apple</span>

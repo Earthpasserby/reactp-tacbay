@@ -19,13 +19,9 @@ function Pagev() {
   }
 
   return (
-    <Container className="kontainer mt-5">
-      <Image
-        src="./images/tacbay.png"
-        alt="logo"
-        className="mx-auto d-block mx-4 img"
-      />
-      <Row className="Row d-block mx-auto mt-3 ">
+    <Container className=" d-flex flex-column align-items-center kontainer">
+      <Image src="./images/tacbay.png" alt="logo" className="img-fluid" />
+      <Row className="Row">
         <h5 className="text-center f-heading fw-bold">Verify Your Number</h5>
         <p className="pagev-p">
           We've sent a verification code to your phone number. Please enter the
@@ -60,16 +56,18 @@ function Pagev() {
             Send again
           </span>
         </p>
-        <div className="d-grid ">
-          <Button
-            type="btn"
-            variant="Secondary"
-            className="text-center btn-lg  border rounded-4 "
-          >
-            <FaArrowLeft />
-            <span className="mx-2 button-text ">Back to the main page</span>
-          </Button>
-        </div>
+        <Link to="/Fpage" style={{ textDecoration: "none" }}>
+          <div className="d-grid ">
+            <Button
+              type="btn"
+              variant="Secondary"
+              className="text-center btn-lg  border rounded-4 "
+            >
+              <FaArrowLeft />
+              <span className="mx-2 button-text ">Back to the main page</span>
+            </Button>
+          </div>
+        </Link>
       </Row>
     </Container>
   );
