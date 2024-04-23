@@ -739,7 +739,7 @@ input:checked + .slider:before {
   color: #0f0;
 }
 
-.body{
+.body {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -767,27 +767,40 @@ input:checked + .slider:before {
   border-radius: 5px;
   border: 1px solid #0f0;
 }
-.pass-field .FiEye {
+.pass-field .Eye {
   right: 18px;
   position: absolute;
-  top:50%;
+  top: 50%;
   transform: translateY(-50%);
 }
-.wrapper .content{
+.wrapper .content {
   margin: 20px 0 10px;
 }
-.content p{
+.content p {
   font-size: 1.3rem;
 }
 
-.content .requirement-list{
+.content .requirement-list {
   margin-top: 20px;
 }
 
-.requirement-list li{
+.requirement-list li {
   list-style: none;
   font-size: 1.07rem;
   display: flex;
-  align-items:center ;
+  align-items: center;
   margin-bottom: 15px;
+}
+
+.password {
+  display: flex;
+  flex-direction: column;
+}
+
+.valid {
+  color: green;
+}
+
+.invalid {
+  color: red;
 }

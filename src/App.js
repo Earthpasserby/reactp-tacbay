@@ -29,6 +29,7 @@ import Changepass from "./components/Changepass";
 import Notify from "./components/Notify";
 import Personal from "./components/Personal";
 import FeatP from "./components/FeatP";
+import PWDRequisite from "./components/PWDRequisite";
 import Newpass from "./components/Newpass";
 
 export default function App() {
@@ -61,6 +62,7 @@ export default function App() {
         <Route path="/Personal" element={<Personal />} />
         <Route path="/FeatP" element={<FeatP />} />
         <Route path="/Newpass" element={<Newpass />} />
+        <Route path="/PWDRequisite" element={<PWDRequisite />} />
       </Routes>
     </BrowserRouter>
   );

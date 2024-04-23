@@ -6,59 +6,55 @@ import { IoEyeOffOutline } from "react-icons/io5";
 import { FaRegCircle } from "react-icons/fa";
 import { FaCircleCheck } from "react-icons/fa6";
 import zxcvbn from "zxcvbn";
+import PWDRequisite from "./PWDRequisite";
 
 function Passwordpage() {
   const [type, setType] = useState("password");
-  const [lengthValidated, setLengthValidated] = useState(false);
-  const [upperValidated, setUpperValidated] = useState(false);
-  const [numberValidated, setNumberValidated] = useState(false);
-  const [specialValidated, setSpecialValidated] = useState(false);
-
-  const handlechange = (value) => {
-    //regex
-    const length = new RegExp("(?=.*[12,])");
-    const upper = new RegExp("(?=.*[A-Z])");
-    const number = new RegExp("(?=.*[0-9])");
-    const special = new RegExp("(?=.*[!@#$%^&*])");
-
-    //lenthcase
-    if (length.test(value)) {
-      setLengthValidated(true);
-    } else {
-      setLengthValidated(false);
-    }
-    //uppercase
-    if (upper.test(value)) {
-      setUpperValidated(true);
-    } else {
-      setUpperValidated(false);
-    }
-    //number
-    if (number.test(value)) {
-      setNumberValidated(true);
-    } else {
-      setNumberValidated(false);
-    }
-    //special
-    if (special.test(value)) {
-      setSpecialValidated(true);
-    } else {
-      setSpecialValidated(false);
-    }
+  const [pwdRequiste, setPWDRquisite] = useState(false);
+  const [checks, setChecks] = useState({
+    capsLetterCheck: false,
+    numberCheck: false,
+    pwdLengthCheck: false,
+    specialCharCheck: false,
+  });
+  const handleOnChange = (e) => {
+    setType(e.target.value);
   };
-  // const [type, setType] = useState("input");
-  // const hideShow = (e) => {
-  //   e.preventDefault();
-  //   e.stopPropagation();
-  //   let currentType = type === "input" ? "password" : "input";
-  //   setType(currentType);
-  // };
-  // const showHide = (e) => {
-  //   e.preventDefault();
-  //   e.stopPropagation();
-  //   let currentType = type === "input" ? "password" : "input";
-  //   setType(currentType);
-  // };
+
+  const handleOnFocus = () => {
+    setPWDRquisite(true);
+  };
+
+  const handleOnBlur = () => {
+    setPWDRquisite(false);
+  };
+
+  const handleOnKeyUp = (e) => {
+    const { value } = e.target;
+    const capsLetterCheck = /[A-Z]/.test(value);
+    const numberCheck = /[0-9]/.test(value);
+    const pwdLengthCheck = value.length >= 12;
+    const specialCharCheck = /[!@#$%^&*]/.test(value);
+    setChecks({
+      capsLetterCheck,
+      numberCheck,
+      pwdLengthCheck,
+      specialCharCheck,
+    });
+  };
+
+  const hideShow = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    let currentType = type === "password" ? "text" : "password";
+    setType(currentType);
+  };
+  const showHide = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    let currentType = type === "password" ? "text" : "password";
+    setType(currentType);
+  };
 
   /* new color*/
   const funcProgressColor = () => {
@@ -99,8 +95,8 @@ function Passwordpage() {
     }
   };
 
-  const [password, setPassword] = useState("");
-  const testResult = zxcvbn(password);
+  // const [password, setPassword] = useState("");
+  const testResult = zxcvbn(type);
   const num = (testResult.score * 100) / 4;
 
   const changePasswordColor = () => ({
@@ -121,27 +117,35 @@ function Passwordpage() {
           To ensure the security of your account, please create a robust
           password.
         </p>
+
         <div className="form-group label-password">
           <div className="mt-2">
             <label className="text-bold fw-semibold">New password</label>
             <input
-              type={type}
+              type="password"
+              id="passwrord"
+              value={type}
+              maxLength={12}
+              onChange={handleOnChange}
+              onFocus={handleOnFocus}
+              onBlur={handleOnBlur}
+              onKeyUp={handleOnKeyUp}
               className="form-control input-password"
               placeholder="password"
-              onChange={(e) => handlechange(e.target.value)}
               // onChange={(e) => setPassword(e.target.value)}
             />
+
             {type === "password" ? (
               <span
                 className="show-password"
-                onClick={(showHide) => setType("text")}
+                onClick={(showHide) => setType("password")}
               >
                 <FiEye />
               </span>
             ) : (
               <span
                 className="show-password"
-                onClick={(hideShow) => setType("password")}
+                onClick={(hideShow) => setType("text")}
               >
                 <IoEyeOffOutline />
               </span>
@@ -150,22 +154,29 @@ function Passwordpage() {
           <div className="mt-2">
             <label className="text-bold fw-semibold">Confirm password</label>
             <input
-              type={type}
+              type="password"
+              id="passwrord"
+              value={type}
+              maxLength={12}
+              onChange={handleOnChange}
+              onFocus={handleOnFocus}
+              onBlur={handleOnBlur}
+              onKeyUp={handleOnKeyUp}
               className="form-control input-password"
               placeholder="password"
-              onChange={(e) => setPassword(e.target.value)}
+              // onChange={(e) => setType(e.target.value)}
             />
             {type === "password" ? (
               <span
                 className="secondShow-password"
-                onClick={() => setType("text")}
+                onClick={() => setType("password")}
               >
                 <FiEye />
               </span>
             ) : (
               <span
                 className="secondShow-password"
-                onClick={() => setType("password")}
+                onClick={() => setType("text")}
               >
                 <IoEyeOffOutline />
               </span>
@@ -180,54 +191,14 @@ function Passwordpage() {
           <div className="progress" style={{ height: "10px" }}>
             <div className="progress-bar" style={changePasswordColor()}></div>
           </div>
-        </div>
-        <div className="mt-2">
-          <Form className="mt-1">
-            <label className="pass-label1">
-              <input
-                type="radio"
-                value={"english"}
-                className="me-1 pas-input "
-              />
-              Minimum 12 characters
-            </label>
-          </Form>
-        </div>
-        <div>
-          <Form className="mt-1">
-            <label className="pass-label1">
-              <input
-                type="radio"
-                value={"english"}
-                className="me-1 pas-input"
-              />
-              Use a mix of uppercase and lowercase letters
-            </label>
-          </Form>
-        </div>
-        <div>
-          <Form className="mt-1">
-            <label className="pass-label1">
-              <input
-                type="radio"
-                value={"english"}
-                className="me-1 pas-input "
-              />
-              Include at least one number
-            </label>
-          </Form>
-        </div>
-        <div>
-          <Form className="mt-1">
-            <label className="pass-label1">
-              <input
-                type="radio"
-                value={"english"}
-                className="me-1 pas-input"
-              />
-              Add at least one special character (!@#$%)
-            </label>
-          </Form>
+          {pwdRequiste ? (
+            <PWDRequisite
+              capsLetterFlag={checks.capsLetterCheck ? "valid" : "invalid"}
+              numberFlag={checks.numberCheck ? "valid" : "invalid"}
+              pwdLengthFlag={checks.pwdLengthCheck ? "valid" : "invalid"}
+              specialCharFlag={checks.specialCharCheck ? "valid" : "invalid"}
+            />
+          ) : null}
         </div>
         <div className="d-grid mt-4">
           <Button
@@ -239,76 +210,6 @@ function Passwordpage() {
           </Button>
         </div>
       </Row>
-      <main className="tracker-box">
-        <div className={lengthValidated ? "validated" : "not-validated"}>
-          {lengthValidated ? (
-            <span className="list-icon green">
-              <FaCircleCheck />
-            </span>
-          ) : (
-            <span className="list-icon green">
-              <FaCircleCheck />
-            </span>
-          )}
-          Minimum 12 characters
-        </div>
-        <div className={upperValidated ? "validated" : "not-validated"}>
-          Use a mix of uppercase and lowercase letters
-        </div>
-        <div className={numberValidated ? "validated" : "not-validated"}>
-          Include at least one number
-        </div>
-        <div className={specialValidated ? "validated" : "not-validated"}>
-          Add at least one special character (!@#$%)
-        </div>
-      </main>
-      {/* <div className="box">
-        <div className="input-with-icon form-control">
-          <input type={type} className="custom-input" />
-          {type === "password" ? (
-            <span className="icon-span" onClick={() => setType("text")}>
-              <FiEye size={18} />
-            </span>
-          ) : (
-            <span className="icon-span" onClick={() => setType("password")}>
-              <IoEyeOffOutline size={18} />
-            </span>
-          )}
-        </div>
-      </div> */}
-
-      <div className="wrapper tracker-box">
-        <div className="pass-field">
-          <input
-            type="password"
-            placeholder="Create password"
-            // className="form-control"
-            // style={{ width: "25%", height: "50%" }}
-          />
-          <FiEye className="FiEye" />
-        </div>
-        <div className="content">
-          <p>Password must contain</p>
-          <ul className="requirement-list">
-            <li>
-              <FaCircleCheck />
-              <span> Minimum 12 characters </span>
-            </li>
-            <li>
-              <FaCircleCheck />
-              <span> Use a mix of uppercase and lowercase letters </span>
-            </li>
-            <li>
-              <FaCircleCheck />
-              <span> Include at least one number </span>
-            </li>
-            <li>
-              <FaCircleCheck />
-              <span> Add at least one special character (!@#$%) </span>
-            </li>
-          </ul>
-        </div>
-      </div>
     </Container>
   );
 }
