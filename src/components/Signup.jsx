@@ -23,9 +23,9 @@ function Signup() {
         <div>
           <label htmlFor="number">Phone Number</label>
           <PhoneInput
-            className="mt-0"
+            className=""
             inputClass="border rounded-3"
-            inputStyle={{ fontSize: "16px", width: "350px" }}
+            inputStyle={{ fontSize: "16px", width: "340px" }}
             country={country}
             onChange={(value) => {
               setNumber(value);

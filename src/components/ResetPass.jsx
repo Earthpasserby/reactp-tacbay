@@ -31,6 +31,7 @@ const ResetPass = () => {
               <label htmlFor="number">Phone Number</label>
               <PhoneInput
                 inputClass=" w-100 border rounded-3 p-4 m-3 "
+                inputStyle={{ fontSize: "16px", width: "330px" }}
                 country={country}
                 placeholder="Enter Phone Number"
                 onChange={(value) => {
@@ -41,10 +42,10 @@ const ResetPass = () => {
               />
             </div>
             <Link to="/VCode" style={{ textDecoration: "none" }}>
-              <div className="d-grid mt-4">
+              <div className="d-grid mt-4 ">
                 <Button
                   type="btn"
-                  className="text-center  btn-lg border rounded-4 "
+                  className="text-center   btn-lg border rounded-4 "
                   style={{
                     height: "56px",
                     background: "#0095BE",
