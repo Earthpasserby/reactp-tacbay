@@ -48,131 +48,136 @@ const CreateAcc = () => {
     console.log(Number);
   }, [Number]);
   return (
-    <Container fluid className="">
-      <Row className="justify-content-center ">
-        <Col sm={5} className="Nav-password p-5">
-          <Image src="./images/tacbay.png" alt="logo" className="img-fluid" />
+    <>
+      <Container fluid className="">
+        <Row className="justify-content-center ">
+          <Col sm={6} className="Nav-password p-5 ">
+            <Image src="./images/tacbay.png" alt="logo" className="img-fluid" />
 
-          <h5 className="">It’s nice to see you again!</h5>
-          <p className=" fw-semibold" style={{ color: "#344051" }}>
-            Log in to continue to your account{" "}
-          </p>
-          <div className="form-group label-password">
-            <div>
-              <label htmlFor="number" className="text-bold fw-bold">
-                Phone Number
-              </label>
-              <PhoneInput
-                className="mt-0"
-                inputClass="w-100 border rounded-3 p-4 m-3 "
-                country={country}
-                placeholder="Enter Phone Number"
-                onChange={(value) => {
-                  setNumber(value);
-                  setCountry();
-                }}
-                countryCodeEditable={false}
-              />
-            </div>
-            <div className="mt-3">
-              <label className="text-bold fw-bold">Confirm password</label>
-              <input
-                type={type}
-                className="form-control CreateAcc-password"
-                placeholder="password"
-                maxLength={12}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-              {/* <span className="" onClick={hideShow}>
+            <h5 className="">It’s nice to see you again!</h5>
+            <p className=" fw-semibold" style={{ color: "#344051" }}>
+              Log in to continue to your account{" "}
+            </p>
+            <div className="form-group label-password">
+              <div>
+                <label htmlFor="number" className="text-bold fw-bold">
+                  Phone Number
+                </label>
+                <PhoneInput
+                  inputClass="form-control   border rounded-3"
+                  inputStyle={{
+                    fontSize: "16px",
+                    width: "560px",
+                    height: "52px",
+                  }}
+                  country={country}
+                  onChange={(value) => {
+                    setNumber(value);
+                    setCountry();
+                  }}
+                  countryCodeEditable={false}
+                />
+              </div>
+              <div className="mt-3">
+                <label className="text-bold fw-bold">Confirm password</label>
+                <input
+                  type={type}
+                  className="form-control CreateAcc-password"
+                  placeholder="password"
+                  maxLength={12}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+                {/* <span className="" onClick={hideShow}>
                 {type === "input" ? <FiEye /> : <FiEye />}
               </span> */}
-            </div>
+              </div>
 
+              <div>
+                <div className="mt-2 d-flex justify-content-between">
+                  <p className="fw-semibold" style={{ color: "#344051" }}>
+                    {" "}
+                    Remember me
+                  </p>
+                  <p
+                    className="fw-bold"
+                    style={{
+                      color: "#0095BE",
+                    }}
+                  >
+                    Forgot password?
+                  </p>
+                </div>
+                <Link to="/Resetpass" style={{ textDecoration: "none" }}>
+                  <div className="d-grid ">
+                    <Button
+                      type="btn"
+                      className="text-center btn-lg border rounded-4 "
+                      style={{
+                        height: "56px",
+                        background: "#0095BE",
+                      }}
+                    >
+                      Log in
+                    </Button>
+                  </div>
+                </Link>
+              </div>
+            </div>
             <div>
-              <div className="mt-2 d-flex justify-content-between">
-                <p className="fw-semibold" style={{ color: "#344051" }}>
-                  {" "}
-                  Remember me
-                </p>
-                <p
+              <p className="mt-2 my-4 f-p">
+                Don't have an account?{" "}
+                <span
                   className="fw-bold"
                   style={{
                     color: "#0095BE",
                   }}
                 >
-                  Forgot password?
-                </p>
-              </div>
-              <Link to="/Resetpass" style={{ textDecoration: "none" }}>
-                <div className="d-grid ">
-                  <Button
-                    type="btn"
-                    className="text-center btn-lg border rounded-4 "
-                    style={{
-                      height: "56px",
-                      background: "#0095BE",
-                    }}
-                  >
-                    Log in
-                  </Button>
-                </div>
-              </Link>
+                  Sign up!
+                </span>
+              </p>
+              <h6 className="f-line2 w-100">OR</h6>
             </div>
-          </div>
-          <div>
-            <p className="mt-2 my-4 f-p">
-              Don't have an account?{" "}
-              <span
-                className="fw-bold"
-                style={{
-                  color: "#0095BE",
-                }}
+            <div className="d-grid mt-4">
+              <Button
+                type="btn"
+                variant="Secondary"
+                className="text-center btn-lg  border rounded-4 "
               >
-                Sign up!
-              </span>
-            </p>
-            <h6 className="f-line2 w-100">OR</h6>
-          </div>
-          <div className="d-grid mt-4">
-            <Button
-              type="btn"
-              variant="Secondary"
-              className="text-center btn-lg  border rounded-4 "
-            >
-              <FcGoogle />
-              <span className="mx-3 button-text ">Continue with Google</span>
-            </Button>
-          </div>
-          <div className="d-grid mt-4">
-            <Button
-              type="btn"
-              variant="Secondary"
-              className="text-center btn-lg border rounded-4"
-            >
-              <FaFacebook />
-              <span className="mx-3 button-text">Continue with Facebook</span>
-            </Button>
-          </div>
-          <div className="d-grid mt-4">
-            <Button
-              type="btn"
-              variant="Secondary"
-              className="text-center btn-lg  border rounded-4"
-            >
-              <FaApple />
-              <span className="mx-3 button-text">Continue with Apple</span>
-            </Button>
-          </div>
-        </Col>
-        <Col sm={7} className="Nav-img">
-          <Image
-            src="./images/Container.png"
-            alt="logo"
-            className="img-fluid text-center"
-          />
-        </Col>
-      </Row>
-    </Container>
+                <FcGoogle />
+                <span className="mx-3 button-text ">Continue with Google</span>
+              </Button>
+            </div>
+            <div className="d-grid mt-4">
+              <Button
+                type="btn"
+                variant="Secondary"
+                className="text-center btn-lg border rounded-4"
+              >
+                <FaFacebook />
+                <span className="mx-3 button-text">Continue with Facebook</span>
+              </Button>
+            </div>
+            <div className="d-grid mt-4">
+              <Button
+                type="btn"
+                variant="Secondary"
+                className="text-center btn-lg  border rounded-4"
+              >
+                <FaApple />
+                <span className="mx-3 button-text">Continue with Apple</span>
+              </Button>
+            </div>
+          </Col>
+          <Col sm={6} className="Nav-img">
+            <Image
+              src="./images/Container.png"
+              alt="logo"
+              className="img-fluid text-center"
+            />
+          </Col>
+        </Row>
+      </Container>
+    </>
   );
 };
 export default CreateAcc;

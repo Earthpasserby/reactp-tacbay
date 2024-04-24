@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Container, Image, Row, Button, Col } from "react-bootstrap";
+import { Container, Image, Row, Button } from "react-bootstrap";
 import { FaCheckCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 

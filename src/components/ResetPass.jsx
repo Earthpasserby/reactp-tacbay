@@ -14,48 +14,55 @@ const ResetPass = () => {
   return (
     <Container fluid>
       <Row>
-        <Col sm={5} className="p-5">
-          <Image src="./images/tacbay.png" alt="logo" className="img-fluid" />
-          <h5 className="">Reset Password</h5>
-          <p className="">
-            Enter your email, we’ll send you a verification code
-          </p>
+        <Col
+          sm={5}
+          className="d-flex justify-content-center Reset"
+          style={{
+            marginTop: "12rem",
+          }}
+        >
           <div>
-            <label htmlFor="number">Phone Number</label>
-            <PhoneInput
-              className="mt-0"
-              inputClass=" w-100 border rounded-3 p-4 m-3 "
-              country={country}
-              placeholder="Enter Phone Number"
-              onChange={(value) => {
-                setNumber(value);
-                setCountry();
-              }}
-              countryCodeEditable={false}
-            />
-          </div>
-          <Link to="/VCode" style={{ textDecoration: "none" }}>
-            <div className="d-grid mt-4">
-              <Button
-                type="btn"
-                className="text-center  btn-lg border rounded-4 "
-                style={{
-                  height: "56px",
-                  background: "#0095BE",
+            <Image src="./images/tacbay.png" alt="logo" className="img-fluid" />
+            <h5 className="">Reset Password</h5>
+            <p className="">
+              Enter your email, we’ll send you a verification code
+            </p>
+            <div>
+              <label htmlFor="number">Phone Number</label>
+              <PhoneInput
+                inputClass=" w-100 border rounded-3 p-4 m-3 "
+                country={country}
+                placeholder="Enter Phone Number"
+                onChange={(value) => {
+                  setNumber(value);
+                  setCountry();
                 }}
-              >
-                Continue
-              </Button>
+                countryCodeEditable={false}
+              />
             </div>
-          </Link>
-          <p
-            className="text-center fw-bold "
-            style={{
-              color: "#0095BE",
-            }}
-          >
-            Back to login screen
-          </p>
+            <Link to="/VCode" style={{ textDecoration: "none" }}>
+              <div className="d-grid mt-4">
+                <Button
+                  type="btn"
+                  className="text-center  btn-lg border rounded-4 "
+                  style={{
+                    height: "56px",
+                    background: "#0095BE",
+                  }}
+                >
+                  Continue
+                </Button>
+              </div>
+            </Link>
+            <p
+              className="text-center fw-bold "
+              style={{
+                color: "#0095BE",
+              }}
+            >
+              Back to login screen
+            </p>
+          </div>
         </Col>
         <Col sm={7} className="Nav-img">
           <Image
