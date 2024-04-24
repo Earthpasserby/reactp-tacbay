@@ -20,60 +20,65 @@ const VCode = () => {
   return (
     <Container fluid>
       <Row>
-        <Col sm={5} className="p-5">
-          <Image src="./images/tacbay.png" alt="logo" className="img-fluid" />
-
-          <h5 className="">Verification Number</h5>
-          <p className="">
-            We've sent a verification code to the phone number you provided.
-            Please enter the code below to proceed.
-          </p>
-          <div className="otp-VCode ">
-            {otp.map((data, i) => {
-              return (
-                <input
-                  type="text"
-                  value={data}
-                  maxLength={1}
-                  onChange={(e) => handlechange(e, i)}
-                />
-              );
-            })}
-          </div>
-          <Link to="/NavbarPage" style={{ textDecoration: "none" }}>
-            <div className="d-grid mt-4">
-              <Button
-                type="btn"
-                className="text-center  btn-lg border rounded-4 "
-                style={{
-                  height: "56px",
-                  background: "#0095BE",
-                }}
-              >
-                Continue
-              </Button>
+        <Col
+          sm={5}
+          className="d-flex justify-content-center Reset"
+          style={{
+            marginTop: "12rem",
+          }}
+        >
+          <div>
+            <h5 className=" f-heading fw-bold">Verify Your Number</h5>
+            <p className="pagev-p ">
+              We've sent a verification code to your phone number. Please enter
+              the code to continue.
+            </p>
+            <div className="otp-area  justify-content-center">
+              {otp.map((data, i) => {
+                return (
+                  <input
+                    type="text"
+                    value={data}
+                    maxLength={1}
+                    onChange={(e) => handlechange(e, i)}
+                  />
+                );
+              })}
             </div>
-          </Link>
-          <p className="mt-1 my-2 text-center pagev-p2">
-            You did not receive the code?
-            <span
-              className="mx-1 fs-6 fw-semibold"
-              style={{
-                color: "#0095BE",
-              }}
-            >
-              Send again
-            </span>
-          </p>
-          <div className="d-grid ">
-            <Button
-              type="btn"
-              variant="Secondary"
-              className="text-center btn-lg  border rounded-4 "
-            >
-              <FaArrowLeft />
-              <span className="mx-2 button-text">Back to the main page</span>
-            </Button>
+            <Link to="/ProfileID" style={{ textDecoration: "none" }}>
+              <div className="d-grid mt-2">
+                <Button
+                  type="btn"
+                  className="text-center  btn-lg border rounded-4 "
+                  style={{ height: "56px", background: "#0095BE" }}
+                >
+                  Continue
+                </Button>
+              </div>
+            </Link>
+            <p className="my-2 text-center pagev-p fw-bold">
+              You did not receive the code?
+              <span
+                className=" mx-1 fs-6 fw-semibold"
+                style={{ color: "#0095BE" }}
+              >
+                Send again
+              </span>
+            </p>
+            <Link to="/Fpage" style={{ textDecoration: "none" }}>
+              <div className="d-grid mb-3 ">
+                <Button
+                  type="btn"
+                  variant="Secondary"
+                  className="text-center btn-lg  border rounded-4 "
+                >
+                  <FaArrowLeft />
+                  <span className="mx-2 button-text ">
+                    Back to the main page
+                  </span>
+                </Button>
+              </div>
+            </Link>
           </div>
         </Col>
         <Col sm={7} className="Nav-img">

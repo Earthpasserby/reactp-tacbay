@@ -129,8 +129,8 @@ label {
   text-align: left;
 }
 .otp-area {
-  width: 70%;
-  margin: 20px auto;
+  width: 100%;
+  margin: 10px auto;
   display: flex;
   gap: 20px;
 }
@@ -138,7 +138,7 @@ label {
 .otp-area input {
   width: 56px;
   height: 56px;
-  padding: 16px;
+  padding: 26px;
   outline: none;
   text-align: center;
   border-radius: 12px;
@@ -309,7 +309,7 @@ label {
   margin-right: 5px;
 }
 
-@media screen and (max-width: 992px) {
+@media only screen and (min-width: 360px) and (max-width: 992px) {
   .row {
     width: 105%;
   }
@@ -347,7 +347,6 @@ label {
     margin: 10px auto;
     display: flex;
     gap: 10px;
-
     justify-content: center;
   }
   .otp-area input {
@@ -363,7 +362,7 @@ label {
     }
   }
   .pagev-p {
-    width: 384px;
+    width: 354px;
     height: 60px;
     font-family: "Roboto";
     font-size: 14px;
@@ -372,6 +371,7 @@ label {
     letter-spacing: 0em;
     text-align: center;
     color: #344051;
+    padding-left: 25px;
   }
   .pagev-p2 {
     width: 100%;
@@ -399,7 +399,7 @@ label {
     justify-content: space-between;
   }
   .Reset {
-    margin-top: 5px !important;
+    margin-top: 8px !important;
   }
   .createAcc {
  padding:0 120px  0 !important ;
