@@ -16,7 +16,10 @@ const Category = () => {
         <h3>Featured</h3>
         <Row className="mt-4">
           <Col sm={4}>
-            <Card className="border border-0">
+            <Card
+              className="border border-0"
+              style={{ background: "transparent" }}
+            >
               <Card.Img
                 src="./images/chairs.png"
                 className="img-fluid card-img"
@@ -76,7 +79,10 @@ const Category = () => {
             </Card>
           </Col>
           <Col sm={4}>
-            <Card className="border border-0">
+            <Card
+              className="border border-0"
+              style={{ background: "transparent" }}
+            >
               <Card.Img
                 src="./images/carp.png"
                 className="img-fluid card-img"
@@ -136,7 +142,10 @@ const Category = () => {
             </Card>
           </Col>
           <Col sm={4}>
-            <Card className="border border-0">
+            <Card
+              className="border border-0"
+              style={{ background: "transparent" }}
+            >
               <Card.Img
                 src="./images/shoemaker.png"
                 className="img-fluid card-img"
@@ -197,7 +206,10 @@ const Category = () => {
         </Row>
         <Row className="mt-3">
           <Col sm={4}>
-            <Card className="border border-0">
+            <Card
+              className="border border-0"
+              style={{ background: "transparent" }}
+            >
               <Card.Img
                 src="./images/welder.png"
                 className="img-fluid card-img"
@@ -257,7 +269,10 @@ const Category = () => {
             </Card>
           </Col>
           <Col sm={4}>
-            <Card className="border border-0">
+            <Card
+              className="border border-0"
+              style={{ background: "transparent" }}
+            >
               <Card.Img
                 src="./images/hairstyle.png"
                 className="img-fluid card-img"
@@ -317,7 +332,10 @@ const Category = () => {
             </Card>
           </Col>
           <Col sm={4}>
-            <Card className="border border-0">
+            <Card
+              className="border border-0"
+              style={{ background: "transparent" }}
+            >
               <Card.Img
                 src="./images/glass.png"
                 className="img-fluid card-img"
@@ -378,7 +396,10 @@ const Category = () => {
         </Row>
         <Row className="mt-3">
           <Col sm={4}>
-            <Card className="border border-0">
+            <Card
+              className="border border-0"
+              style={{ background: "transparent" }}
+            >
               <Card.Img src="./images/wrk.png" className="img-fluid card-img" />
               <span
                 className="text-primary"
@@ -435,7 +456,10 @@ const Category = () => {
             </Card>
           </Col>
           <Col sm={4}>
-            <Card className="border border-0">
+            <Card
+              className="border border-0"
+              style={{ background: "transparent" }}
+            >
               <Card.Img
                 src="./images/brick.png"
                 className="img-fluid card-img"
@@ -495,7 +519,10 @@ const Category = () => {
             </Card>
           </Col>
           <Col sm={4}>
-            <Card className="border border-0">
+            <Card
+              className="border border-0"
+              style={{ background: "transparent" }}
+            >
               <Card.Img
                 src="./images/corn.png"
                 className="img-fluid card-img"
@@ -556,7 +583,10 @@ const Category = () => {
         </Row>
         <Row className="mt-3">
           <Col sm={4}>
-            <Card className="border border-0">
+            <Card
+              className="border border-0"
+              style={{ background: "transparent" }}
+            >
               <Card.Img src="./images/Ac.png" className="img-fluid card-img" />
               <span
                 className="text-primary"
@@ -613,7 +643,10 @@ const Category = () => {
             </Card>
           </Col>
           <Col sm={4}>
-            <Card className="border border-0">
+            <Card
+              className="border border-0"
+              style={{ background: "transparent" }}
+            >
               <Card.Img
                 src="./images/weld.png"
                 className="img-fluid card-img"
@@ -673,7 +706,10 @@ const Category = () => {
             </Card>
           </Col>
           <Col sm={4}>
-            <Card className="border border-0">
+            <Card
+              className="border border-0"
+              style={{ background: "transparent" }}
+            >
               <Card.Img
                 src="./images/food.png"
                 className="img-fluid card-img"

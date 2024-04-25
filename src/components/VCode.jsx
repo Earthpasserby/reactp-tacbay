@@ -45,7 +45,7 @@ const VCode = () => {
                 );
               })}
             </div>
-            <Link to="/ProfileID" style={{ textDecoration: "none" }}>
+            <Link to="/NavbarPage" style={{ textDecoration: "none" }}>
               <div className="d-grid mt-2">
                 <Button
                   type="btn"

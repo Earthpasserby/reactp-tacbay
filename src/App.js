@@ -30,6 +30,8 @@ import Notify from "./components/Notify";
 import Personal from "./components/Personal";
 import FeatP from "./components/FeatP";
 import PWDRequisite from "./components/PWDRequisite";
+import Not from "./components/Not";
+import Welcome from "./components/Welcome";
 
 export default function App() {
   const [theme, setTheme] = useState("light");
@@ -61,6 +63,8 @@ export default function App() {
         <Route path="/Personal" element={<Personal />} />
         <Route path="/FeatP" element={<FeatP />} />
         <Route path="/PWDRequisite" element={<PWDRequisite />} />
+        <Route path="/Not" element={<Not />} />
+        <Route path="/Welcome" element={<Welcome />} />
       </Routes>
     </BrowserRouter>
   );

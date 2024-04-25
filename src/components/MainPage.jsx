@@ -23,10 +23,10 @@ const MainPage = () => {
 
   return (
     <>
-      <NavBar />
-      <Container className="image-container">
-        <Row className="mt-5">
-          <Col sm={12}>
+      <NavBar className="bg-white" />
+      <Container fluid className="image-container">
+        <Row>
+          <Col sm={12} className="MP">
             <div>
               <Image src="./images/Rectangle 3.png" className="img-fluid" />
             </div>
@@ -95,9 +95,9 @@ const MainPage = () => {
             </Button>
           </div>
         </div>
+        <ButtonP />
+        <Category />
       </Container>
-      <ButtonP />
-      <Category />
     </>
   );
 };

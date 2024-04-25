@@ -180,7 +180,7 @@ function Passwordpage() {
               specialCharFlag={checks.specialCharCheck ? "valid" : "invalid"}
             />
           ) : null}
-          <Link to="/Houserule" style={{ textDecoration: "none" }}>
+          <Link to="/Welcome" style={{ textDecoration: "none" }}>
             <div className="d-grid mt-4">
               <Button
                 type="btn"

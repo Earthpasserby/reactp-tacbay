@@ -402,10 +402,42 @@ label {
     margin-top: 8px !important;
   }
   .createAcc {
- padding:0 120px  0 !important ;
+    padding: 0 120px 0 !important ;
   }
 }
 
+/* NotificationPage page/*/
+.Notification {
+  font-size: 14px;
+  background: green;
+  border-radius: 50px;
+  width: 48px;
+  height: 48px;
+  padding: 10px 10px 10px 10px;
+  gap: 0px;
+  color: white;
+  opacity: 0px;
+}
+.icon-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+.NotificationPage {
+  background-color: #141c24;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.NotificationLogin {
+  background-color: white;
+  border-radius: 7px;
+  width: 430px;
+  padding: 20px;
+}
+.NotPage {
+}
 /* NavbarPage page/*/
 .Nav-container {
   margin-top: 50px;
@@ -470,9 +502,14 @@ label {
 
 /* MainPage */
 .image-container {
-  position: relative;
+  /* position: relative;
   width: 100%;
-  max-width: 600px; /* Adjust the max-width as needed */
+  max-width: 600px;  */
+  min-height: 20vh;
+  background-color: #e4e7ec;
+}
+.MP{
+  width: 450px;
 }
 
 .centered-text {
