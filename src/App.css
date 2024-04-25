@@ -436,8 +436,7 @@ label {
   width: 430px;
   padding: 20px;
 }
-.NotPage {
-}
+
 /* NavbarPage page/*/
 .Nav-container {
   margin-top: 50px;
@@ -508,8 +507,11 @@ label {
   min-height: 20vh;
   background-color: #e4e7ec;
 }
-.MP{
-  width: 450px;
+.MP {
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .centered-text {
