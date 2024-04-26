@@ -25,26 +25,20 @@ const MainPage = () => {
     <>
       <NavBar className="bg-white" />
       <Container fluid className="image-container">
-        <Row>
-          <Col sm={12}>
-            <div className=" MP">
-              <Image
-                src="./images/Rectangle 3.png"
-                className="img-fluid mt-5"
-                style={{ width: "90%" }}
-              />
-              <div className="centered-text">
-                <h4>Discover Skilled Artisans Near You</h4>
-                <p>
-                  Explore a world of craftsmanship at your fingertips. Find
-                  reliable artisans in your neighborhood, ready to bring
-                  expertise to your doorstep.
-                </p>
-              </div>
+        <div className="ontainer">
+          <div className="content">
+            <Image src="./images/Rectangle 3.png" className="centered-image " />
+            <div className="centered-text">
+              <h4>Discover Skilled Artisans Near You</h4>
+              <p>
+                Explore a world of craftsmanship at your fingertips. Find
+                reliable artisans in your neighborhood, ready to bring expertise
+                to your doorstep.
+              </p>
             </div>
-          </Col>
-        </Row>
-        {/* <div className="d-flex  jumbotron mx-auto mb-5">
+          </div>
+        </div>
+        <div className="d-flex  jumbotron mx-auto mb-5">
           <div>
             <InputGroup>
               <InputGroup.Text>
@@ -99,7 +93,7 @@ const MainPage = () => {
             </Button>
           </div>
         </div>
-        <ButtonP /> */}
+        <ButtonP />
         <Category />
       </Container>
     </>
